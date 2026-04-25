@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Build artifacts (these ARE committed for distribution; exclude only intermediates)
+build/ttf-pre-hint/
+
+# Source fonts (large, can be re-downloaded; keep only if desired)
+# Uncomment to exclude:
+# source/*.otf
+
+# Designspace temp files
+*.designspace
