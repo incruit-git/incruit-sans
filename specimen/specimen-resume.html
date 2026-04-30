@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Incruit Sans — 이력서 시나리오 검수</title>
+<style>
+  /* OTF (CFF) — 디자인툴/인쇄 */
+  @font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-Thin.otf') format('opentype'); font-weight: 100; }
+  @font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-ExtraLight.otf') format('opentype'); font-weight: 200; }
+  @font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-Light.otf') format('opentype'); font-weight: 300; }
+  @font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-Regular.otf') format('opentype'); font-weight: 400; }
+  @font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-Medium.otf') format('opentype'); font-weight: 500; }
+  @font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-SemiBold.otf') format('opentype'); font-weight: 600; }
+  @font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-Bold.otf') format('opentype'); font-weight: 700; }
+  @font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-ExtraBold.otf') format('opentype'); font-weight: 800; }
+  @font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-Black.otf') format('opentype'); font-weight: 900; }
+
+  /* Hinted TTF — 웹/UI 작은 사이즈 */
+  @font-face { font-family: 'Incruit Sans Hinted'; src: url('../build/ttf/IncruitSans-Thin.ttf') format('truetype'); font-weight: 100; }
+  @font-face { font-family: 'Incruit Sans Hinted'; src: url('../build/ttf/IncruitSans-ExtraLight.ttf') format('truetype'); font-weight: 200; }
+  @font-face { font-family: 'Incruit Sans Hinted'; src: url('../build/ttf/IncruitSans-Light.ttf') format('truetype'); font-weight: 300; }
+  @font-face { font-family: 'Incruit Sans Hinted'; src: url('../build/ttf/IncruitSans-Regular.ttf') format('truetype'); font-weight: 400; }
+  @font-face { font-family: 'Incruit Sans Hinted'; src: url('../build/ttf/IncruitSans-Medium.ttf') format('truetype'); font-weight: 500; }
+  @font-face { font-family: 'Incruit Sans Hinted'; src: url('../build/ttf/IncruitSans-SemiBold.ttf') format('truetype'); font-weight: 600; }
+  @font-face { font-family: 'Incruit Sans Hinted'; src: url('../build/ttf/IncruitSans-Bold.ttf') format('truetype'); font-weight: 700; }
+  @font-face { font-family: 'Incruit Sans Hinted'; src: url('../build/ttf/IncruitSans-ExtraBold.ttf') format('truetype'); font-weight: 800; }
+  @font-face { font-family: 'Incruit Sans Hinted'; src: url('../build/ttf/IncruitSans-Black.ttf') format('truetype'); font-weight: 900; }
+
+  * { box-sizing: border-box; }
+  html { background: #ececec; }
+  body {
+    font-family: 'Incruit Sans', system-ui, sans-serif;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 40px 24px 80px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .page-title {
+    max-width: 1280px;
+    margin: 0 auto 24px;
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+  }
+  .page-subtitle {
+    max-width: 1280px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #555;
+  }
+
+  .compare {
+    max-width: 1280px;
+    margin: 0 auto 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .compare-label {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+  .resume {
+    background: #fff;
+    padding: 48px 56px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    min-height: 1080px;
+  }
+  .resume.hinted { font-family: 'Incruit Sans Hinted', system-ui, sans-serif; }
+
+  /* Resume internal styles — match real resume hierarchy */
+  .r-header {
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  .r-name {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 4px;
+  }
+  .r-name-en {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    letter-spacing: 0.02em;
+  }
+  .r-meta {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 4px 16px;
+    font-size: 12px;
+    margin-top: 12px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+  .r-meta dt { color: #999; font-weight: 500; }
+  .r-meta dd { margin: 0; font-weight: 400; }
+
+  .r-section { margin: 24px 0; }
+  .r-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 6px;
+    margin: 0 0 12px;
+  }
+
+  .r-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .r-row .period {
+    color: #666;
+    font-weight: 500;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    font-variant-numeric: tabular-nums;
+  }
+  .r-row .body .org { font-weight: 700; }
+  .r-row .body .role { color: #444; font-weight: 500; }
+  .r-row .body .desc { color: #444; margin-top: 2px; }
+  .r-row .body .bullets { margin: 4px 0 0; padding-left: 16px; color: #333; }
+  .r-row .body .bullets li { margin: 2px 0; }
+  .r-row .body .num {
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+  }
+
+  .r-summary {
+    font-size: 13px;
+    line-height: 1.65;
+    color: #222;
+  }
+  .r-summary strong { font-weight: 700; }
+
+  .r-contact-row {
+    font-size: 12px;
+    color: #444;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+
+  /* Diagnostic blocks */
+  .diag {
+    max-width: 1280px;
+    margin: 0 auto 40px;
+    background: #fff;
+    padding: 32px 40px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .diag h2 {
+    font-size: 13px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-weight: 700;
+    margin: 0 0 16px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 8px;
+  }
+  .diag-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .diag-cell h3 {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+
+  /* Baseline check */
+  .baseline-line {
+    border-bottom: 1px dashed #f44;
+    line-height: 1.0;
+    padding-bottom: 0;
+  }
+  .baseline-row { font-size: 22px; margin: 16px 0 4px; }
+  .baseline-row.small { font-size: 14px; }
+  .baseline-caption { font-size: 11px; color: #999; margin: 0 0 8px; }
+
+  /* Tabular vs proportional */
+  .num-col {
+    font-size: 14px;
+    line-height: 1.7;
+    border-collapse: collapse;
+  }
+  .num-col td { padding: 2px 12px; }
+  .num-col .label { color: #666; font-size: 11px; }
+  .num-col .tnum { font-feature-settings: 'tnum' on, 'lnum' on; font-variant-numeric: tabular-nums; }
+
+  /* Print-size simulation */
+  .print-sim {
+    background: #fafafa;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    margin: 8px 0;
+  }
+  .print-sim .label { font-size: 10px; color: #999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+  /* Color palette block */
+  .pal {
+    display: flex;
+    gap: 6px;
+    font-size: 10px;
+    margin-top: 4px;
+  }
+  .pal span { padding: 2px 6px; border-radius: 3px; background: #efefef; color: #555; font-weight: 500; }
+
+  /* Toggles */
+  .controls {
+    max-width: 1280px;
+    margin: 0 auto 24px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 12px;
+    color: #555;
+  }
+  .controls button {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .controls button.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+
+  body.zoom-90 { font-size: 90%; }
+  body.zoom-80 { font-size: 80%; }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">Incruit Sans — 이력서 시나리오 검수</h1>
+<p class="page-subtitle">목표: 이력서 작성·표현 최적화 검증 · OTF vs Hinted TTF 좌우 비교 · tabular figures · baseline · 위계</p>
+
+<div class="controls">
+  <span>본문 스케일:</span>
+  <button data-zoom="100" class="active">100%</button>
+  <button data-zoom="90">90%</button>
+  <button data-zoom="80">80% (인쇄 근사)</button>
+</div>
+
+<!-- ===== Side-by-side full resume comparison ===== -->
+<div class="compare">
+  <div>
+    <p class="compare-label">Left · Incruit Sans (OTF/CFF) — 디자인툴/인쇄용</p>
+    <div class="resume">
+      <header class="r-header">
+        <h1 class="r-name">홍길동</h1>
+        <div class="r-name-en">Gildong Hong</div>
+        <dl class="r-meta">
+          <dt>생년</dt><dd>1985.06.20</dd>
+          <dt>연락처</dt><dd>010-1234-5678 · gildong.hong@example.com</dd>
+          <dt>주소</dt><dd>서울시 강남구 테헤란로 123, 16층</dd>
+          <dt>웹</dt><dd>https://incruit.com · linkedin.com/in/gildonghong</dd>
+        </dl>
+      </header>
+
+      <section class="r-section">
+        <h2 class="r-section-title">자기소개 · Summary</h2>
+        <p class="r-summary">
+          27년간 채용 산업의 변화를 이끌어온 <strong>HR-Tech 경영자</strong>. AI 매칭 정확도를 <strong>97.3%</strong>까지 끌어올린 데이터 기반 의사결정과,
+          1998년 창업부터 코스닥 상장까지 직접 운영해온 경험. The future of work is built on <em>data</em>, <em>trust</em>, and <em>people</em>.
+        </p>
+      </section>
+
+      <section class="r-section">
+        <h2 class="r-section-title">경력 · Experience</h2>
+        <div class="r-row">
+          <span class="period">2018.01 – 현재</span>
+          <div class="body">
+            <span class="org">(주)인크루트</span> · <span class="role">대표이사 / Chairman</span>
+            <ul class="bullets">
+              <li>매출 <span class="num">312.4억원</span> → <span class="num">1,247.8억원</span> 성장 주도 (CAGR <span class="num">18.7%</span>)</li>
+              <li>AI 매칭 엔진 <em>Navi</em> 런칭 — MAU <span class="num">2,400,000</span> 돌파</li>
+              <li>Series C 투자 유치 <span class="num">$45M</span> (Sequoia, KIP)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="r-row">
+          <span class="period">2010.04 – 2017.12</span>
+          <div class="body">
+            <span class="org">Incruit Lab Inc.</span> · <span class="role">CTO</span>
+            <p class="desc">검색·매칭 엔진 자체 구축. 일 처리량 <span class="num">8.2M</span> queries.</p>
+          </div>
+        </div>
+        <div class="r-row">
+          <span class="period">1998.06 – 2010.03</span>
+          <div class="body">
+            <span class="org">인크루트 (창업)</span> · <span class="role">Founder</span>
+            <p class="desc">국내 최초 인터넷 채용 플랫폼 런칭. 1999년 외환위기 직후 <span class="num">10만</span> 채용공고 돌파.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="r-section">
+        <h2 class="r-section-title">학력 · Education</h2>
+        <div class="r-row">
+          <span class="period">1995 – 1997</span>
+          <div class="body">
+            <span class="org">연세대학교 대학원</span> · <span class="role">경영학 석사 (MBA)</span>
+          </div>
+        </div>
+        <div class="r-row">
+          <span class="period">1990 – 1994</span>
+          <div class="body">
+            <span class="org">서울대학교</span> · <span class="role">컴퓨터공학 학사 · GPA 3.82/4.30</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="r-section">
+        <h2 class="r-section-title">자격 · 어학 · Certifications</h2>
+        <div class="r-row">
+          <span class="period">2024.11</span>
+          <div class="body"><span class="role">AWS Certified Solutions Architect — Professional</span></div>
+        </div>
+        <div class="r-row">
+          <span class="period">2023.06</span>
+          <div class="body"><span class="role">TOEIC 970 / OPIc AL · TOEFL iBT 112</span></div>
+        </div>
+      </section>
+
+      <section class="r-section">
+        <h2 class="r-section-title">대표 성과 지표</h2>
+        <div class="r-contact-row">
+          ARR <strong>₩148.2B</strong> · NPS <strong>72</strong> · 직원 <strong>1,037</strong>명 · 정규직 비율 <strong>94.2%</strong> · 여성 임원 <strong>38%</strong>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div>
+    <p class="compare-label">Right · Incruit Sans Hinted (TTF, ttfautohint) — 웹/모바일 작은 사이즈</p>
+    <div class="resume hinted">
+      <header class="r-header">
+        <h1 class="r-name">홍길동</h1>
+        <div class="r-name-en">Gildong Hong</div>
+        <dl class="r-meta">
+          <dt>생년</dt><dd>1985.06.20</dd>
+          <dt>연락처</dt><dd>010-1234-5678 · gildong.hong@example.com</dd>
+          <dt>주소</dt><dd>서울시 강남구 테헤란로 123, 16층</dd>
+          <dt>웹</dt><dd>https://incruit.com · linkedin.com/in/gildonghong</dd>
+        </dl>
+      </header>
+
+      <section class="r-section">
+        <h2 class="r-section-title">자기소개 · Summary</h2>
+        <p class="r-summary">
+          27년간 채용 산업의 변화를 이끌어온 <strong>HR-Tech 경영자</strong>. AI 매칭 정확도를 <strong>97.3%</strong>까지 끌어올린 데이터 기반 의사결정과,
+          1998년 창업부터 코스닥 상장까지 직접 운영해온 경험. The future of work is built on <em>data</em>, <em>trust</em>, and <em>people</em>.
+        </p>
+      </section>
+
+      <section class="r-section">
+        <h2 class="r-section-title">경력 · Experience</h2>
+        <div class="r-row">
+          <span class="period">2018.01 – 현재</span>
+          <div class="body">
+            <span class="org">(주)인크루트</span> · <span class="role">대표이사 / Chairman</span>
+            <ul class="bullets">
+              <li>매출 <span class="num">312.4억원</span> → <span class="num">1,247.8억원</span> 성장 주도 (CAGR <span class="num">18.7%</span>)</li>
+              <li>AI 매칭 엔진 <em>Navi</em> 런칭 — MAU <span class="num">2,400,000</span> 돌파</li>
+              <li>Series C 투자 유치 <span class="num">$45M</span> (Sequoia, KIP)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="r-row">
+          <span class="period">2010.04 – 2017.12</span>
+          <div class="body">
+            <span class="org">Incruit Lab Inc.</span> · <span class="role">CTO</span>
+            <p class="desc">검색·매칭 엔진 자체 구축. 일 처리량 <span class="num">8.2M</span> queries.</p>
+          </div>
+        </div>
+        <div class="r-row">
+          <span class="period">1998.06 – 2010.03</span>
+          <div class="body">
+            <span class="org">인크루트 (창업)</span> · <span class="role">Founder</span>
+            <p class="desc">국내 최초 인터넷 채용 플랫폼 런칭. 1999년 외환위기 직후 <span class="num">10만</span> 채용공고 돌파.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="r-section">
+        <h2 class="r-section-title">학력 · Education</h2>
+        <div class="r-row">
+          <span class="period">1995 – 1997</span>
+          <div class="body">
+            <span class="org">연세대학교 대학원</span> · <span class="role">경영학 석사 (MBA)</span>
+          </div>
+        </div>
+        <div class="r-row">
+          <span class="period">1990 – 1994</span>
+          <div class="body">
+            <span class="org">서울대학교</span> · <span class="role">컴퓨터공학 학사 · GPA 3.82/4.30</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="r-section">
+        <h2 class="r-section-title">자격 · 어학 · Certifications</h2>
+        <div class="r-row">
+          <span class="period">2024.11</span>
+          <div class="body"><span class="role">AWS Certified Solutions Architect — Professional</span></div>
+        </div>
+        <div class="r-row">
+          <span class="period">2023.06</span>
+          <div class="body"><span class="role">TOEIC 970 / OPIc AL · TOEFL iBT 112</span></div>
+        </div>
+      </section>
+
+      <section class="r-section">
+        <h2 class="r-section-title">대표 성과 지표</h2>
+        <div class="r-contact-row">
+          ARR <strong>₩148.2B</strong> · NPS <strong>72</strong> · 직원 <strong>1,037</strong>명 · 정규직 비율 <strong>94.2%</strong> · 여성 임원 <strong>38%</strong>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Diagnostic 1: Tabular vs Proportional ===== -->
+<div class="diag">
+  <h2>진단 1 — Tabular vs Proportional 숫자 (이력서 기간/연봉 정렬에 결정적)</h2>
+  <div class="diag-grid">
+    <div class="diag-cell">
+      <h3>Default (proportional, 너비 가변)</h3>
+      <table class="num-col">
+        <tr><td class="label">기간</td><td>2018.01 – 2026.04</td></tr>
+        <tr><td class="label">기간</td><td>2010.04 – 2017.12</td></tr>
+        <tr><td class="label">기간</td><td>1998.06 – 2010.03</td></tr>
+        <tr><td class="label">매출</td><td>1,247,800,000</td></tr>
+        <tr><td class="label">매출</td><td>0,312,400,000</td></tr>
+        <tr><td class="label">매출</td><td>0,008,250,000</td></tr>
+      </table>
+    </div>
+    <div class="diag-cell">
+      <h3>Tabular (tnum, 너비 등폭) — 권장</h3>
+      <table class="num-col">
+        <tr><td class="label">기간</td><td class="tnum">2018.01 – 2026.04</td></tr>
+        <tr><td class="label">기간</td><td class="tnum">2010.04 – 2017.12</td></tr>
+        <tr><td class="label">기간</td><td class="tnum">1998.06 – 2010.03</td></tr>
+        <tr><td class="label">매출</td><td class="tnum">1,247,800,000</td></tr>
+        <tr><td class="label">매출</td><td class="tnum">0,312,400,000</td></tr>
+        <tr><td class="label">매출</td><td class="tnum">0,008,250,000</td></tr>
+      </table>
+    </div>
+  </div>
+  <p style="font-size:11px; color:#777; margin-top:12px">
+    💡 오른쪽이 세로로 깔끔히 정렬되면 tnum feature 가 폰트에 포함된 것. 정렬 안 되면 폰트가 tabular figures 를 지원하지 않거나 OpenType feature 가 누락된 상태.
+  </p>
+</div>
+
+<!-- ===== Diagnostic 2: Korean-Latin Baseline ===== -->
+<div class="diag">
+  <h2>진단 2 — 한글-라틴 베이스라인 (이름·회사 한·영 병기 시 어긋남 검사)</h2>
+  <p class="baseline-caption">빨간 점선이 베이스라인. 한글과 라틴이 같은 선에 앉아야 시각적으로 어긋나 보이지 않음.</p>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+    <div>
+      <h3 class="compare-label" style="font-size:10px;">OTF (CFF)</h3>
+      <div class="baseline-row baseline-line">홍길동 Gildong Hong · CHO at 인크루트 Incruit</div>
+      <div class="baseline-row baseline-line">Senior Director · 책임연구원 · 1,247,800,000원</div>
+      <div class="baseline-row small baseline-line">jobs/2602020004283 · API v3.2 · CTO@incruit.com · 010-1234-5678</div>
+    </div>
+    <div class="hinted">
+      <h3 class="compare-label" style="font-size:10px;">Hinted TTF</h3>
+      <div class="baseline-row baseline-line">홍길동 Gildong Hong · CHO at 인크루트 Incruit</div>
+      <div class="baseline-row baseline-line">Senior Director · 책임연구원 · 1,247,800,000원</div>
+      <div class="baseline-row small baseline-line">jobs/2602020004283 · API v3.2 · CTO@incruit.com · 010-1234-5678</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Diagnostic 3: Hinting at small sizes ===== -->
+<div class="diag">
+  <h2>진단 3 — 작은 사이즈 hinting (이력서 본문 12-14px / 인쇄 10pt 근사)</h2>
+  <div class="diag-grid">
+    <div class="diag-cell">
+      <h3>OTF (CFF) · 14px</h3>
+      <div class="print-sim">
+        <p style="font-size:14px; line-height:1.6; margin:0;">
+          27년간 채용 산업의 변화를 이끌어온 HR-Tech 경영자. AI 매칭 정확도를 97.3%까지 끌어올린 데이터 기반 의사결정. The future of work is built on data, trust, and people.
+        </p>
+      </div>
+      <h3 style="margin-top:12px;">OTF · 12px</h3>
+      <div class="print-sim">
+        <p style="font-size:12px; line-height:1.55; margin:0;">
+          매출 312.4억원 → 1,247.8억원 성장 주도 (CAGR 18.7%). MAU 2,400,000 돌파. Series C 투자 유치 $45M.
+          서울시 강남구 테헤란로 123, 16층 · 010-1234-5678 · gildong.hong@example.com
+        </p>
+      </div>
+      <h3 style="margin-top:12px;">OTF · 10px (인쇄 footnote 시뮬)</h3>
+      <div class="print-sim">
+        <p style="font-size:10px; line-height:1.5; margin:0;">
+          ※ 본 이력서의 모든 숫자 데이터는 2026년 1분기 감사보고서 기준이며 KOSDAQ 공시 자료와 일치합니다. © 2026 Incruit Corp.
+        </p>
+      </div>
+    </div>
+    <div class="diag-cell hinted">
+      <h3>Hinted TTF · 14px</h3>
+      <div class="print-sim">
+        <p style="font-size:14px; line-height:1.6; margin:0;">
+          27년간 채용 산업의 변화를 이끌어온 HR-Tech 경영자. AI 매칭 정확도를 97.3%까지 끌어올린 데이터 기반 의사결정. The future of work is built on data, trust, and people.
+        </p>
+      </div>
+      <h3 style="margin-top:12px;">Hinted · 12px</h3>
+      <div class="print-sim">
+        <p style="font-size:12px; line-height:1.55; margin:0;">
+          매출 312.4억원 → 1,247.8억원 성장 주도 (CAGR 18.7%). MAU 2,400,000 돌파. Series C 투자 유치 $45M.
+          서울시 강남구 테헤란로 123, 16층 · 010-1234-5678 · gildong.hong@example.com
+        </p>
+      </div>
+      <h3 style="margin-top:12px;">Hinted · 10px (인쇄 footnote 시뮬)</h3>
+      <div class="print-sim">
+        <p style="font-size:10px; line-height:1.5; margin:0;">
+          ※ 본 이력서의 모든 숫자 데이터는 2026년 1분기 감사보고서 기준이며 KOSDAQ 공시 자료와 일치합니다. © 2026 Incruit Corp.
+        </p>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:11px; color:#777; margin-top:12px">
+    💡 작은 사이즈일수록 차이 큼. Hinted TTF 가 가독성에서 우월해야 정상. macOS 는 시스템 자체 hinting 이 강해서 차이가 작을 수 있음 → Windows/Edge 또는 모바일 Chrome 에서 재확인 권장.
+  </p>
+</div>
+
+<!-- ===== Diagnostic 4: Weight hierarchy for resume ===== -->
+<div class="diag">
+  <h2>진단 4 — 이력서 위계용 weight 매핑 권장안</h2>
+  <table class="num-col" style="width:100%; font-size:13px;">
+    <tr><td class="label" style="width:140px;">이름 (28-32px)</td><td><span style="font-weight:800; font-size:24px;">홍길동 / Gildong Hong</span></td><td class="label">800 (ExtraBold)</td></tr>
+    <tr><td class="label">섹션 제목</td><td><span style="font-weight:700; text-transform:uppercase; letter-spacing:0.16em; font-size:11px;">EXPERIENCE · 경력</span></td><td class="label">700 (Bold) + 11px caps</td></tr>
+    <tr><td class="label">회사·기관명</td><td><span style="font-weight:700;">(주)인크루트 · Incruit Lab Inc.</span></td><td class="label">700 (Bold)</td></tr>
+    <tr><td class="label">직책·역할</td><td><span style="font-weight:500;">대표이사 / Chairman</span></td><td class="label">500 (Medium)</td></tr>
+    <tr><td class="label">기간 (날짜)</td><td><span class="tnum" style="font-weight:500;">2018.01 – 2026.04</span></td><td class="label">500 + tnum</td></tr>
+    <tr><td class="label">본문 / 자기소개</td><td><span style="font-weight:400;">27년간 채용 산업의 변화를 이끌어온 HR-Tech 경영자.</span></td><td class="label">400 (Regular)</td></tr>
+    <tr><td class="label">강조 키워드</td><td><span style="font-weight:600;">AI 매칭 · 97.3%</span></td><td class="label">600 (SemiBold)</td></tr>
+    <tr><td class="label">각주 / 메타</td><td><span style="font-weight:300; color:#888;">© 2026 Incruit Corp.</span></td><td class="label">300 (Light)</td></tr>
+  </table>
+</div>
+
+<script>
+  document.querySelectorAll('.controls button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.controls button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.body.classList.remove('zoom-90', 'zoom-80');
+      const z = btn.dataset.zoom;
+      if (z === '90') document.body.classList.add('zoom-90');
+      if (z === '80') document.body.classList.add('zoom-80');
+    });
+  });
+</script>
+
+</body>
+</html>
