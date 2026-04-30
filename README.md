@@ -1,12 +1,15 @@
-# Incruit Sans v0.1
+# Incruit Sans v0.2
 
 **Pretendard 한글 + Min Sans 라틴 합성 폰트**
 
 - Built: 2026-04-25
 - Glyphs: 한글 11,172자 (Pretendard) + 라틴 383자 (Min Sans, 2× 스케일)
 - UPM: 2048 통일
-- Style: Regular (400)
+- Weights: **9 weights — Thin 100 / ExtraLight 200 / Light 300 / Regular 400 / Medium 500 / SemiBold 600 / Bold 700 / ExtraBold 800 / Black 900**
+- Variable Font: `IncruitSans-VF.ttf` · `wght` axis 100–900
+- Hinting: ttfautohint 적용 (build/ttf/, build/web/hinted/)
 - License: SIL Open Font License 1.1 (둘 다 OFL → 합성도 OFL 자동 상속)
+- 브랜드 가이드: [BI-GUIDE.md](BI-GUIDE.md)
 
 ## 합성 의도
 
@@ -18,57 +21,127 @@
 ```
 incruit-sans/
 ├── README.md                            # 이 파일
-├── merge_script.py                      # 재현 가능 빌드 스크립트
+├── CHANGELOG.md                         # 버전별 변경사항
+├── BI-GUIDE.md                          # 인크루트 브랜드 시스템 v0.1
+├── glyphs-customization-guide.md        # Glyphs 3 커스터마이징 가이드
+├── AUTHORS.md
+├── merge_script.py                      # 단일 weight 합성 스크립트
+├── build_all_weights.py                 # 9 weights 일괄 빌드 스크립트
 ├── source/
-│   ├── Pretendard-Regular.otf           # 원본 (orioncactus, OFL)
-│   └── MinSans-Regular.otf              # 원본 (Jinseong Kim, OFL)
+│   ├── Pretendard-{9 weights}.otf       # 원본 (orioncactus, OFL)
+│   └── MinSans-{9 weights}.otf          # 원본 (Jinseong Kim, OFL)
 ├── build/
-│   ├── IncruitSans-Regular.otf          # ★ 산출물
+│   ├── IncruitSans-{9 weights}.otf      # ★ 디자인툴/인쇄용 (CFF)
+│   ├── IncruitSans-VF.ttf               # ★ Variable Font (wght 100-900)
+│   ├── ttf/
+│   │   └── IncruitSans-{9 weights}.ttf  # Hinted TTF (ttfautohint)
+│   ├── web/
+│   │   ├── IncruitSans-{9 weights}.woff2   # ★ 웹 배포용 (unhinted)
+│   │   ├── IncruitSans-{9 weights}.woff
+│   │   ├── IncruitSans-VF.woff2            # Variable Font WOFF2
+│   │   └── hinted/
+│   │       └── IncruitSans-{9 weights}.woff2   # 웹 작은 사이즈용 (hinted)
 │   └── OFL.txt                          # 라이선스
+├── design-tokens/                       # Figma Tokens / Style Dictionary 호환
 └── specimen/
-    └── specimen.html                    # 시각 검수 페이지
+    ├── specimen.html                    # Regular weight 검수
+    ├── specimen-weights.html            # 9 weights 검수 + OTF/Hinted 비교
+    └── specimen-resume.html             # 이력서 시나리오 검수 (좌우 비교 + 진단)
 ```
 
 ## 사용법
 
 ### macOS에 설치
+
 ```bash
-open build/IncruitSans-Regular.otf
-# Font Book 열림 → "글꼴 설치" 클릭
+# 9 weights 모두 설치
+open build/IncruitSans-*.otf
+# Font Book 열림 → 모두 설치
 ```
 
-### CSS
+### CSS — 9 weights
+
 ```css
+/* 디자인툴/인쇄용 (CFF) */
+@font-face { font-family: 'Incruit Sans'; src: url('IncruitSans-Thin.otf') format('opentype'); font-weight: 100; }
+@font-face { font-family: 'Incruit Sans'; src: url('IncruitSans-Regular.otf') format('opentype'); font-weight: 400; }
+@font-face { font-family: 'Incruit Sans'; src: url('IncruitSans-Bold.otf') format('opentype'); font-weight: 700; }
+/* ... 나머지 6 weights 동일 패턴 */
+
+body { font-family: 'Incruit Sans', system-ui, sans-serif; }
+```
+
+### CSS — 웹 배포 (WOFF2 권장)
+
+```css
+/* 일반 웹 본문: unhinted WOFF2 */
 @font-face {
   font-family: 'Incruit Sans';
-  src: url('IncruitSans-Regular.otf') format('opentype');
+  src: url('build/web/IncruitSans-Regular.woff2') format('woff2');
   font-weight: 400;
+  font-display: swap;
 }
-body { font-family: 'Incruit Sans', sans-serif; }
+
+/* 작은 사이즈/UI 컴포넌트: hinted WOFF2 */
+@font-face {
+  font-family: 'Incruit Sans Hinted';
+  src: url('build/web/hinted/IncruitSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
 ```
+
+### CSS — Variable Font (단일 파일 9 weights)
+
+```css
+@font-face {
+  font-family: 'Incruit Sans VF';
+  src: url('build/web/IncruitSans-VF.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.ui-thin   { font-family: 'Incruit Sans VF'; font-weight: 100; }
+.ui-bold   { font-family: 'Incruit Sans VF'; font-weight: 700; }
+```
+
+### 이력서·표 정렬을 위한 등폭 숫자
+
+```css
+.tabular { font-feature-settings: 'tnum' on, 'lnum' on; font-variant-numeric: tabular-nums; }
+```
+
+`tnum` 적용 여부는 `specimen/specimen-resume.html` 의 진단 1 영역에서 시각 확인 가능.
 
 ### 시각 검수
+
 ```bash
-open specimen/specimen.html
+open specimen/specimen.html             # Regular 단일 weight
+open specimen/specimen-weights.html     # 9 weights + 작은 사이즈 hinting 비교
+open specimen/specimen-resume.html      # 이력서 시나리오 검수 (OTF vs Hinted, tabular figures, 한·영 베이스라인)
 ```
 
-## v0.1 한계 (다음 단계)
+## v0.2 개선 사항
 
-- **Regular 1weight만**: 9 weights(Thin~Black)로 확장 필요. 둘 다 9 weights 제공하므로 동일 스크립트로 batch 처리 가능
-- **메트릭 미세조정 X**: Min Sans 라틴의 베이스라인이 Pretendard와 살짝 다를 수 있음. specimen.html 검수 후 hhea/OS/2 fine-tune 필요
-- **커닝 미점검**: GPOS 테이블의 라틴-한글 커닝 페어 검증 필요
-- **힌팅 부재**: ttfautohint 적용 후 작은 사이즈 체크 (특히 본문 14px 이하)
-- **Variable Font 미지원**: 두 원본 모두 Variable 버전 있으므로 차후 합성 가능
+| 항목 | v0.1 | v0.2 |
+|---|---|---|
+| Weight 수 | Regular 1개 | **9개** (Thin~Black) |
+| Variable Font | ❌ | ✅ `IncruitSans-VF.ttf` (wght 100-900) |
+| Hinting | ❌ | ✅ ttfautohint (build/ttf/, build/web/hinted/) |
+| 웹 배포 포맷 | ❌ | ✅ WOFF2 / WOFF (build/web/) |
+| 브랜드 가이드 | ❌ | ✅ [BI-GUIDE.md](BI-GUIDE.md) |
+| Design Tokens | ❌ | ✅ design-tokens/ (Figma Tokens 호환) |
+| Specimen | 단일 페이지 | 3개 (single weight / 9 weights / 이력서) |
 
-## 다음 작업 후보
+## 다음 단계 후보
 
-| 작업 | 효과 | 도구 | 시간 |
-|---|---|---|---|
-| 9 weights 일괄 빌드 | Thin~Black 풀세트 | merge_script.py 루프 | 1시간 |
-| 인크루트 핵심 글자 커스텀 | "인크루트", "채용" 등 BI 강화 | Glyphs 3 | 1주 |
-| ttfautohint 적용 | 작은 사이즈 가독성 | `ttfautohint` CLI | 30분 |
-| Variable Font 합성 | 단일 파일 9 weights | merge_script.py 변형 | 4시간 |
-| 자모 분리 디자인 (Track 2) | 진정한 자체 폰트 | Glyphs 3 + 디자이너 | 1~3개월 |
+| 작업 | 효과 | 시간 |
+|---|---|---|
+| 인크루트 핵심 글자 커스텀 | "인크루트", "채용" 등 BI 강화 | 1주 (Glyphs 3) |
+| GPOS 라틴-한글 커닝 페어 | 한·영 혼용 시 시각 어긋남 보정 | 2일 |
+| 자모 분리 디자인 (Track 2) | 진정한 자체 폰트 | 1~3개월 (디자이너 협업) |
+| CDN 배포 | incruit 서비스 통합 사용 | jsDelivr 또는 자체 CDN, 1일 |
+| OpenType feature 확장 | tnum 검증·ss01 고유 글리프 | 3일 |
 
 ## 라이선스 의무
 
@@ -76,7 +149,7 @@ OFL 1.1에 따라:
 1. ✅ 이름을 "Pretendard", "Min Sans"가 아닌 "Incruit Sans"로 변경 (Reserved Font Name 회피)
 2. ✅ OFL.txt 동봉 (build/OFL.txt)
 3. ✅ name table에 origin 표기 (nameID 13 license description)
-4. 외부 배포 시 source(또는 merge_script.py + 원본 폰트) 함께 배포해야 함
+4. 외부 배포 시 source(또는 build_all_weights.py + 원본 폰트) 함께 배포해야 함
 5. ❌ 폰트 파일 자체를 판매 금지 (서비스 일부로 사용은 OK)
 6. ✅ 상업적 사용 자유 (인크루트 BI, www, 모바일, 인쇄물 모두 가능)
 
