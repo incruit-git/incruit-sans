@@ -1,0 +1,133 @@
+name: Build Fonts
+
+# Trigger conditions
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - "sources/**"
+      - "build/**"
+      - ".github/workflows/build-fonts.yml"
+  pull_request:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:  # Manual trigger via GitHub UI
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build Incruit Sans
+    timeout-minutes: 15
+
+    steps:
+      # 1. Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r build/requirements.txt
+          pip list | grep -E "fontmake|fonttools|glyphsLib"
+
+      # 4. Validate Glyphs source
+      - name: Validate Glyphs source
+        run: |
+          if [ ! -f "sources/IncruitSans-Regular.glyphs" ]; then
+            echo "ERROR: sources/IncruitSans-Regular.glyphs not found"
+            exit 1
+          fi
+          python3 build/validate_glyphs.py
+
+      # 5. Build all formats (OTF, TTF, WOFF2, Variable Font)
+      - name: Build all font formats
+        run: python3 build/build.py --verbose
+
+      # 6. Validate built fonts
+      - name: Validate built fonts
+        run: |
+          python3 << 'EOVALIDATE'
+          from fontTools.ttLib import TTFont
+          import os
+          import sys
+
+          fonts_to_check = [
+              "fonts/otf/IncruitSans-Regular.otf",
+              "fonts/ttf/IncruitSans-Regular.ttf",
+              "fonts/IncruitSans-VF.ttf",
+          ]
+
+          errors = []
+          warnings = []
+          for font_path in fonts_to_check:
+              if not os.path.exists(font_path):
+                  warnings.append(f"{font_path} not found")
+                  continue
+              try:
+                  font = TTFont(font_path)
+                  print(f"OK: {os.path.basename(font_path)}")
+                  hhea = font["hhea"]
+                  if hhea.ascender < 700:
+                      errors.append(f"{font_path}: Ascender too low ({hhea.ascender})")
+                  glyph_count = len(font.getGlyphOrder())
+                  print(f"   Glyphs: {glyph_count}")
+                  font.close()
+              except Exception as e:
+                  errors.append(f"{font_path}: {str(e)}")
+
+          if warnings:
+              print("\nWARN:")
+              for w in warnings:
+                  print(f"  - {w}")
+          if errors:
+              print("\nERROR: Validation failed")
+              for err in errors:
+                  print(f"  - {err}")
+              sys.exit(1)
+          print("\nOK: All fonts validated")
+          EOVALIDATE
+
+      # 7. Measure file sizes (baseline tracking)
+      - name: Measure file sizes
+        run: |
+          echo "=== Build Output Sizes ==="
+          ls -lhR fonts/ 2>/dev/null || echo "No files generated"
+          echo ""
+          echo "=== WOFF2 Total Size ==="
+          du -ch fonts/webfonts/*.woff2 2>/dev/null | tail -1 || true
+
+      # 8. Upload build artifacts
+      - name: Upload artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: incruit-sans-fonts-${{ github.sha }}
+          path: |
+            fonts/
+          retention-days: 30
+          if-no-files-found: error
+
+      # 9. Build Summary
+      - name: Build Summary
+        if: always()
+        run: |
+          echo "=== Build Status ==="
+          echo "Job status: ${{ job.status }}"
+          echo "Commit: ${{ github.sha }}"
+          echo ""
+          echo "Generated formats:"
+          [ -d fonts/otf ] && echo "  OTF: $(ls fonts/otf/*.otf 2>/dev/null | wc -l) files" || echo "  OTF: none"
+          [ -d fonts/ttf ] && echo "  TTF: $(ls fonts/ttf/*.ttf 2>/dev/null | wc -l) files" || echo "  TTF: none"
+          [ -d fonts/webfonts ] && echo "  WOFF2: $(ls fonts/webfonts/*.woff2 2>/dev/null | wc -l) files" || echo "  WOFF2: none"
+          [ -f fonts/IncruitSans-VF.ttf ] && echo "  Variable Font: yes" || echo "  Variable Font: no"

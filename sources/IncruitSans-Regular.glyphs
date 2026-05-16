@@ -1,0 +1,6902 @@
+{
+  ".appVersion": "1225",
+  "classes": [],
+  "customParameters": [
+    {
+      "name": "postscriptSlantAngle",
+      "value": 0
+    },
+    {
+      "name": "underlinePosition",
+      "value": -75
+    },
+    {
+      "name": "underlineThickness",
+      "value": 50
+    }
+  ],
+  "date": "2026-04-25T21:30:11.023410",
+  "familyName": "Incruit Sans",
+  "fontMaster": [
+    {
+      "ascender": 800,
+      "capHeight": 750,
+      "customName": "Regular",
+      "descender": -200,
+      "id": "master-regular",
+      "xHeight": 500,
+      "customParameters": [
+        {
+          "name": "postscriptSlantAngle",
+          "value": 0
+        },
+        {
+          "name": "typoAscender",
+          "value": 800
+        },
+        {
+          "name": "typoDescender",
+          "value": -200
+        },
+        {
+          "name": "typoLineGap",
+          "value": 0
+        },
+        {
+          "name": "winAscender",
+          "value": 800
+        },
+        {
+          "name": "winDescender",
+          "value": 200
+        }
+      ]
+    },
+    {
+      "ascender": 800,
+      "capHeight": 750,
+      "customName": "Bold",
+      "descender": -200,
+      "id": "bold-master-1",
+      "xHeight": 500,
+      "customParameters": [
+        {
+          "name": "postscriptSlantAngle",
+          "value": 0
+        },
+        {
+          "name": "typoAscender",
+          "value": 800
+        },
+        {
+          "name": "typoDescender",
+          "value": -200
+        },
+        {
+          "name": "typoLineGap",
+          "value": 0
+        },
+        {
+          "name": "winAscender",
+          "value": 800
+        },
+        {
+          "name": "winDescender",
+          "value": 200
+        }
+      ]
+    }
+  ],
+  "glyphs": [
+    {
+      "glyphname": "A",
+      "unicode": "0041",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "B",
+      "unicode": "0042",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "C",
+      "unicode": "0043",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "D",
+      "unicode": "0044",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "E",
+      "unicode": "0045",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "F",
+      "unicode": "0046",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "G",
+      "unicode": "0047",
+      "width": 650,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "H",
+      "unicode": "0048",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "I",
+      "unicode": "0049",
+      "width": 350,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "J",
+      "unicode": "004A",
+      "width": 400,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "K",
+      "unicode": "004B",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "L",
+      "unicode": "004C",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "M",
+      "unicode": "004D",
+      "width": 750,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 700,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 700,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 700,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 700,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "N",
+      "unicode": "004E",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "O",
+      "unicode": "004F",
+      "width": 650,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "P",
+      "unicode": "0050",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "Q",
+      "unicode": "0051",
+      "width": 650,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "R",
+      "unicode": "0052",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "S",
+      "unicode": "0053",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "T",
+      "unicode": "0054",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "U",
+      "unicode": "0055",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "V",
+      "unicode": "0056",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "W",
+      "unicode": "0057",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "X",
+      "unicode": "0058",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "Y",
+      "unicode": "0059",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "Z",
+      "unicode": "005A",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "a",
+      "unicode": "0061",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "b",
+      "unicode": "0062",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "c",
+      "unicode": "0063",
+      "width": 450,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "d",
+      "unicode": "0064",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "e",
+      "unicode": "0065",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "f",
+      "unicode": "0066",
+      "width": 350,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "g",
+      "unicode": "0067",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "h",
+      "unicode": "0068",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "i",
+      "unicode": "0069",
+      "width": 280,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "j",
+      "unicode": "006A",
+      "width": 300,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "k",
+      "unicode": "006B",
+      "width": 480,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "l",
+      "unicode": "006C",
+      "width": 280,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "m",
+      "unicode": "006D",
+      "width": 750,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 700,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 700,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 700,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 700,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "n",
+      "unicode": "006E",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "o",
+      "unicode": "006F",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "p",
+      "unicode": "0070",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "q",
+      "unicode": "0071",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "r",
+      "unicode": "0072",
+      "width": 360,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 310,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 310,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 310,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 310,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "s",
+      "unicode": "0073",
+      "width": 420,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 370,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 370,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 370,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 370,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "t",
+      "unicode": "0074",
+      "width": 320,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 270,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 270,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 270,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 270,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "u",
+      "unicode": "0075",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "v",
+      "unicode": "0076",
+      "width": 480,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "w",
+      "unicode": "0077",
+      "width": 680,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 630,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 630,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 630,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 630,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "x",
+      "unicode": "0078",
+      "width": 480,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "y",
+      "unicode": "0079",
+      "width": 480,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 430,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "z",
+      "unicode": "007A",
+      "width": 420,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 370,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 370,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 370,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 370,
+                  "y": 500,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 500,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "zero",
+      "unicode": "0030",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "one",
+      "unicode": "0031",
+      "width": 400,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "two",
+      "unicode": "0032",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "three",
+      "unicode": "0033",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "four",
+      "unicode": "0034",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "five",
+      "unicode": "0035",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "six",
+      "unicode": "0036",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "seven",
+      "unicode": "0037",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "eight",
+      "unicode": "0038",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "nine",
+      "unicode": "0039",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni1100",
+      "unicode": "1100",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni1101",
+      "unicode": "1101",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni1102",
+      "unicode": "1102",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni1103",
+      "unicode": "1103",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni1104",
+      "unicode": "1104",
+      "width": 500,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 450,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni AC00",
+      "unicode": "AC00",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni B098",
+      "unicode": "B098",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni B2E4",
+      "unicode": "B2E4",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni B77C",
+      "unicode": "B77C",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni B9C8",
+      "unicode": "B9C8",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni BC14",
+      "unicode": "BC14",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni C0AC",
+      "unicode": "C0AC",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni C544",
+      "unicode": "C544",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni C790",
+      "unicode": "C790",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni CC28",
+      "unicode": "CC28",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni CE74",
+      "unicode": "CE74",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni D0C0",
+      "unicode": "D0C0",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni D328",
+      "unicode": "D328",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "uni D558",
+      "unicode": "D558",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": -200,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 800,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 800,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "space",
+      "unicode": "0020",
+      "width": 250,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 200,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 200,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 200,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 200,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "exclam",
+      "unicode": "0021",
+      "width": 300,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "quotedbl",
+      "unicode": "0022",
+      "width": 400,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "numbersign",
+      "unicode": "0023",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "dollar",
+      "unicode": "0024",
+      "width": 550,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 500,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "percent",
+      "unicode": "0025",
+      "width": 800,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 750,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "ampersand",
+      "unicode": "0026",
+      "width": 650,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 600,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "quoteright",
+      "unicode": "0027",
+      "width": 250,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 200,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 200,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 200,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 200,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "parenleft",
+      "unicode": "0028",
+      "width": 350,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "parenright",
+      "unicode": "0029",
+      "width": 350,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 300,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "asterisk",
+      "unicode": "002A",
+      "width": 450,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "plus",
+      "unicode": "002B",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "comma",
+      "unicode": "002C",
+      "width": 280,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "hyphen",
+      "unicode": "002D",
+      "width": 400,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "period",
+      "unicode": "002E",
+      "width": 280,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "slash",
+      "unicode": "002F",
+      "width": 400,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 350,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "colon",
+      "unicode": "003A",
+      "width": 280,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 230,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "semicolon",
+      "unicode": "003B",
+      "width": 300,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 250,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "less",
+      "unicode": "003C",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "equal",
+      "unicode": "003D",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "greater",
+      "unicode": "003E",
+      "width": 600,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 550,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "question",
+      "unicode": "003F",
+      "width": 450,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 400,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "glyphname": "at",
+      "unicode": "0040",
+      "width": 700,
+      "layers": [
+        {
+          "layerId": "master-regular",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 650,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 650,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerId": "bold-master-1",
+          "paths": [
+            {
+              "nodes": [
+                {
+                  "x": 50,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 650,
+                  "y": 0,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 650,
+                  "y": 750,
+                  "segmentType": "line"
+                },
+                {
+                  "x": 50,
+                  "y": 750,
+                  "segmentType": "line"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "instances": [
+    {
+      "interpolationWeight": 350,
+      "name": "Thin",
+      "linkStyle": null
+    },
+    {
+      "interpolationWeight": 400,
+      "name": "Regular",
+      "linkStyle": "Regular"
+    },
+    {
+      "interpolationWeight": 500,
+      "name": "Medium",
+      "linkStyle": null
+    },
+    {
+      "interpolationWeight": 600,
+      "name": "SemiBold",
+      "linkStyle": null
+    },
+    {
+      "interpolationWeight": 700,
+      "name": "Bold",
+      "linkStyle": null
+    },
+    {
+      "interpolationWeight": 800,
+      "name": "ExtraBold",
+      "linkStyle": null
+    }
+  ],
+  "kerningLTR": {},
+  "kerningRTL": {},
+  "unitsPerEm": 1000,
+  "versionMajor": 1,
+  "versionMinor": 0,
+  "featurePrefixes": [],
+  "features": [
+    {
+      "automatic": true,
+      "code": "languagesystem DFLT dflt;\nlanguagesystem glyf DFLT dflt;\nlanguagesystem glyf hang dflt;",
+      "name": "languagesystem"
+    }
+  ],
+  "userdata": {
+    "fontName": "Incruit Sans",
+    "designer": "Designer Name",
+    "copyright": "Copyright 2026 Incruit Corp."
+  }
+}

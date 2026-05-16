@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incruit Sans - Resume Layout Test</title>
+  <style>
+    /* ═════════════════════════════════════════════════════════════
+       Incruit Sans 웹폰트 정의 (Variable Font 우선)
+       ═════════════════════════════════════════════════════════════ */
+    @font-face {
+      font-family: "Incruit Sans";
+      src: url("../fonts/IncruitSans-VF.woff2") format("woff2-variations"),
+           url("../fonts/IncruitSans-VF.woff2") format("woff2");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* 정적 fallback */
+    @supports not (font-variation-settings: normal) {
+      @font-face {
+        font-family: "Incruit Sans";
+        src: url("../fonts/webfonts/IncruitSans-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Incruit Sans";
+        src: url("../fonts/webfonts/IncruitSans-Medium.woff2") format("woff2");
+        font-weight: 500;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Incruit Sans";
+        src: url("../fonts/webfonts/IncruitSans-SemiBold.woff2") format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Incruit Sans";
+        src: url("../fonts/webfonts/IncruitSans-Bold.woff2") format("woff2");
+        font-weight: 700;
+        font-display: swap;
+      }
+    }
+
+    /* ═════════════════════════════════════════════════════════════
+       디자인 토큰 (tokens/weight.css 동기화)
+       ═════════════════════════════════════════════════════════════ */
+    :root {
+      --is-weight-body:       350;
+      --is-weight-regular:    400;
+      --is-weight-medium:     500;
+      --is-weight-semibold:   600;
+      --is-weight-bold:       700;
+      --is-weight-extrabold:  800;
+
+      --is-resume-name:       700;
+      --is-resume-section:    600;
+      --is-resume-company:    500;
+      --is-resume-body:       400;
+      --is-resume-caption:    350;
+
+      --color-text:           #212529;
+      --color-muted:          #6c757d;
+      --color-border:         #dee2e6;
+      --color-accent:         #0066cc;
+      --color-bg-page:        #f1f3f5;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      font-family: "Incruit Sans", "Pretendard", -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+      font-feature-settings: "tnum" 1, "kern" 1, "liga" 1;
+      color: var(--color-text);
+      background: var(--color-bg-page);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ═════════════════════════════════════════════════════════════
+       페이지 컨테이너 (A4: 210×297mm)
+       ═════════════════════════════════════════════════════════════ */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      border-bottom: 1px solid var(--color-border);
+      padding: 12px 24px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+      z-index: 10;
+      font-size: 13px;
+    }
+
+    .toolbar label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .toolbar code {
+      font-family: "SF Mono", Menlo, monospace;
+      background: #f8f9fa;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 24px auto;
+      padding: 20mm 18mm;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+    }
+
+    /* ═════════════════════════════════════════════════════════════
+       이력서 콘텐츠 스타일
+       ═════════════════════════════════════════════════════════════ */
+    .resume-header {
+      border-bottom: 2px solid var(--color-text);
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+
+    .resume-name {
+      font-size: 28pt;
+      font-weight: var(--is-resume-name);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .resume-title {
+      font-size: 14pt;
+      font-weight: var(--is-resume-body);
+      color: var(--color-muted);
+      margin-top: 4px;
+    }
+
+    .resume-contact {
+      font-size: 11pt;
+      font-weight: var(--is-resume-caption);
+      color: var(--color-muted);
+      margin-top: 8px;
+      font-feature-settings: "tnum" 1;
+    }
+
+    .resume-section {
+      margin-top: 24px;
+    }
+
+    .resume-section-title {
+      font-size: 16pt;
+      font-weight: var(--is-resume-section);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    .resume-item {
+      margin-bottom: 16px;
+    }
+
+    .resume-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .resume-company {
+      font-size: 13pt;
+      font-weight: var(--is-resume-company);
+    }
+
+    .resume-period {
+      font-size: 11pt;
+      font-weight: var(--is-resume-caption);
+      color: var(--color-muted);
+      font-feature-settings: "tnum" 1;
+      white-space: nowrap;
+    }
+
+    .resume-role {
+      font-size: 12pt;
+      font-weight: var(--is-resume-body);
+      color: var(--color-muted);
+      margin-bottom: 6px;
+    }
+
+    .resume-body,
+    .resume-list li {
+      font-size: 11pt;
+      font-weight: var(--is-resume-body);
+      line-height: 1.6;
+    }
+
+    .resume-list {
+      padding-left: 18px;
+    }
+
+    .resume-list li {
+      margin-bottom: 2px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 24px;
+      margin-top: 8px;
+      font-size: 11pt;
+      font-feature-settings: "tnum" 1;
+    }
+
+    .metric-grid strong {
+      font-weight: var(--is-resume-company);
+    }
+
+    .education-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      font-size: 11pt;
+      font-feature-settings: "tnum" 1;
+    }
+
+    .education-row strong {
+      font-weight: var(--is-resume-company);
+    }
+
+    /* ═════════════════════════════════════════════════════════════
+       Print Mode (A4 출력 — Design §5.3 요구사항)
+       ═════════════════════════════════════════════════════════════ */
+    @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      body {
+        background: white;
+      }
+      .toolbar { display: none; }
+      .page {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 18mm 16mm;
+        box-shadow: none;
+        border-radius: 0;
+        page-break-after: always;
+      }
+    }
+
+    /* ═════════════════════════════════════════════════════════════
+       데모: tnum 토글 비활성 시 시각화
+       ═════════════════════════════════════════════════════════════ */
+    body.no-tnum,
+    body.no-tnum * {
+      font-feature-settings: "tnum" 0, "kern" 1, "liga" 1 !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Toolbar (Design §5.3 Page UI Checklist) -->
+  <div class="toolbar" role="toolbar" aria-label="Resume Test Controls">
+    <strong style="font-weight: 600;">Resume Layout Test</strong>
+    <span style="color: var(--color-muted);">|</span>
+
+    <label>
+      <input type="checkbox" id="toggle-tnum" checked>
+      <code>font-feature-settings: "tnum" 1</code>
+    </label>
+
+    <label>
+      <input type="checkbox" id="toggle-print">
+      Print Preview Mode
+    </label>
+
+    <button onclick="window.print()" style="padding: 4px 12px; cursor: pointer;">
+      🖨️ Print (PDF)
+    </button>
+
+    <span style="color: var(--color-muted); margin-left: auto;">
+      A4 (210×297mm) | Incruit Sans VF
+    </span>
+  </div>
+
+  <!-- 페이지 1: 이력서 -->
+  <article class="page">
+    <header class="resume-header">
+      <h1 class="resume-name">김취준</h1>
+      <p class="resume-title">Frontend Engineer · React/Next.js</p>
+      <p class="resume-contact">
+        kimchijun@example.com · 010-1234-5678 · github.com/kimchijun · 서울특별시 강남구
+      </p>
+    </header>
+
+    <!-- 경력사항 -->
+    <section class="resume-section">
+      <h2 class="resume-section-title">경력사항</h2>
+
+      <div class="resume-item">
+        <div class="resume-item-header">
+          <span class="resume-company">㈜인크루트 — Frontend Team</span>
+          <span class="resume-period">2024.03 – 현재</span>
+        </div>
+        <p class="resume-role">Senior Frontend Engineer</p>
+        <ul class="resume-list">
+          <li>React/Next.js 기반 이력서 에디터 리팩토링 주도 (월간 활성 사용자 12% 증가)</li>
+          <li>TypeScript 도입 및 코드베이스 마이그레이션 — 타입 커버리지 95% 달성</li>
+          <li>디자인 시스템 구축 (Storybook + Tailwind) — 개발 효율성 30% 향상</li>
+          <li>Core Web Vitals 개선 — LCP 4.2s → 1.8s, CLS 0.18 → 0.04</li>
+        </ul>
+        <div class="metric-grid">
+          <div><strong>연봉:</strong> 50,000,000원</div>
+          <div><strong>팀 규모:</strong> 7명</div>
+          <div><strong>KPI 달성률:</strong> 95.5%</div>
+          <div><strong>코드 리뷰 PR:</strong> 1,234건</div>
+        </div>
+      </div>
+
+      <div class="resume-item">
+        <div class="resume-item-header">
+          <span class="resume-company">㈜네이버 — Platform Lab</span>
+          <span class="resume-period">2022.06 – 2024.02</span>
+        </div>
+        <p class="resume-role">Frontend Engineer</p>
+        <ul class="resume-list">
+          <li>네이버 검색 결과 페이지 React 마이그레이션 (DAU 5,000만)</li>
+          <li>실시간 자동완성 시스템 성능 최적화 — 응답 시간 280ms → 95ms</li>
+          <li>A/B 테스트 인프라 구축으로 의사결정 속도 8배 향상</li>
+        </ul>
+        <div class="metric-grid">
+          <div><strong>연봉:</strong> 38,500,000원</div>
+          <div><strong>처리 트래픽:</strong> 1,200,000 RPM</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 학력 -->
+    <section class="resume-section">
+      <h2 class="resume-section-title">학력</h2>
+      <div class="education-row">
+        <span><strong>서울대학교</strong> 컴퓨터공학부 (학사)</span>
+        <span class="resume-period">2018.03 – 2022.02 · GPA 3.85/4.5</span>
+      </div>
+    </section>
+
+    <!-- 기술 스택 -->
+    <section class="resume-section">
+      <h2 class="resume-section-title">기술 스택</h2>
+      <div class="resume-body">
+        <p style="margin-bottom: 6px;">
+          <strong style="font-weight: var(--is-resume-company);">Languages:</strong>
+          TypeScript, JavaScript (ES2023), Python, Go
+        </p>
+        <p style="margin-bottom: 6px;">
+          <strong style="font-weight: var(--is-resume-company);">Frontend:</strong>
+          React 18, Next.js 14, Vue 3, Svelte, Tailwind CSS, CSS Modules
+        </p>
+        <p style="margin-bottom: 6px;">
+          <strong style="font-weight: var(--is-resume-company);">Tooling:</strong>
+          Vite, Webpack, Turbopack, ESLint, Prettier, Vitest, Playwright
+        </p>
+        <p>
+          <strong style="font-weight: var(--is-resume-company);">Backend / DevOps:</strong>
+          Node.js, Express, GraphQL, PostgreSQL, Redis, Docker, GitHub Actions
+        </p>
+      </div>
+    </section>
+
+    <!-- 어워드 (tnum 정렬 검증용) -->
+    <section class="resume-section">
+      <h2 class="resume-section-title">수상 및 활동</h2>
+      <ul class="resume-list" style="font-feature-settings: 'tnum' 1;">
+        <li>2025.11 — 인크루트 사내 해커톤 우승상 (1,000,000원)</li>
+        <li>2024.05 — 네이버 검색 부문 BEST PERFORMANCE상</li>
+        <li>2023.09 — Open Source Contributor of the Year (npm 패키지 다운로드 1,234,567회/월)</li>
+        <li>2022.12 — 졸업논문 우수상 (서울대 공과대학)</li>
+      </ul>
+    </section>
+  </article>
+
+  <!-- Print Preview Layer -->
+  <script>
+    (function() {
+      const toggleTnum = document.getElementById('toggle-tnum');
+      const togglePrint = document.getElementById('toggle-print');
+
+      toggleTnum?.addEventListener('change', function(e) {
+        document.body.classList.toggle('no-tnum', !e.target.checked);
+      });
+
+      togglePrint?.addEventListener('change', function(e) {
+        if (e.target.checked) {
+          document.body.style.background = 'white';
+        } else {
+          document.body.style.background = '';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

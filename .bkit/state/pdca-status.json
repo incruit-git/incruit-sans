@@ -1,0 +1,63 @@
+{
+  "version": "3.0",
+  "lastUpdated": "2026-04-25T13:00:00.000Z",
+  "activeFeatures": ["incruit-sans"],
+  "primaryFeature": "incruit-sans",
+  "features": {
+    "incruit-sans": {
+      "phase": "check",
+      "scope": "module-1-build",
+      "startedAt": "2026-04-25T08:21:28.373Z",
+      "matchRate": 88,
+      "matchRateBreakdown": {
+        "structural": 100,
+        "functional": 85,
+        "strategic": 70
+      },
+      "documents": {
+        "prd": "docs/00-pm/incruit-sans.prd.md",
+        "plan": "docs/01-plan/features/incruit-sans.plan.md",
+        "design": "docs/02-design/features/incruit-sans.design.md",
+        "analysis": "docs/03-analysis/incruit-sans.analysis.md"
+      },
+      "moduleProgress": {
+        "module-1-build": "in-progress",
+        "module-2-latin": "pending",
+        "module-3-hangul-a": "pending",
+        "module-4-hangul-b": "pending",
+        "module-5-launch": "pending"
+      }
+    }
+  },
+  "pipeline": {
+    "currentPhase": 4,
+    "level": "Dynamic",
+    "phaseHistory": [
+      { "phase": "pm", "completedAt": "2026-04-25T11:00:00.000Z" },
+      { "phase": "plan", "completedAt": "2026-04-25T12:00:00.000Z" },
+      { "phase": "design", "completedAt": "2026-04-25T12:30:00.000Z" }
+    ]
+  },
+  "session": {
+    "startedAt": "2026-04-25T08:21:28.373Z",
+    "onboardingCompleted": false,
+    "lastActivity": "2026-04-25T08:21:33.725Z"
+  },
+  "history": [],
+  "stateMachine": {
+    "defaultWorkflow": "default",
+    "activeWorkflows": {},
+    "totalTransitions": 0
+  },
+  "automation": {
+    "globalLevel": 2,
+    "trustScore": 40,
+    "pendingApprovals": 0,
+    "lastGateResult": null
+  },
+  "team": {
+    "enabled": true,
+    "stateFile": ".bkit/runtime/agent-state.json",
+    "eventsFile": ".bkit/runtime/agent-events.jsonl"
+  }
+}

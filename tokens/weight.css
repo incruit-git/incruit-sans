@@ -1,0 +1,206 @@
+/* Incruit Sans Weight Presets
+ * CSS Custom Properties (CSS Variables) for font-weight values
+ *
+ * Base Weights: 350, 400, 500, 600, 700, 800
+ * Resume Editor Presets: name, section, company, body, caption
+ *
+ * Usage:
+ *   font-weight: var(--is-weight-regular);
+ *   font-weight: var(--is-resume-name);
+ */
+
+:root {
+  /* ─────────────────────────────────────────
+   * 기본 굵기 레벨 (Basic Weight Levels)
+   * ───────────────────────────────────────── */
+
+  /* 극세: 보충 텍스트, 주석 (9pt) */
+  --is-weight-thin: 350;
+
+  /* 정규: 기본 텍스트, 본문 (11pt) */
+  --is-weight-regular: 400;
+
+  /* 중간: 강조, 회사명, 직책 (12pt) */
+  --is-weight-medium: 500;
+
+  /* 준굵음: 섹션 타이틀 (13pt) */
+  --is-weight-semibold: 600;
+
+  /* 굵음: 이름, 제목 (16–18pt) */
+  --is-weight-bold: 700;
+
+  /* 특굵음: 배너 헤딩 (20pt+) */
+  --is-weight-extrabold: 800;
+
+  /* ─────────────────────────────────────────
+   * 이력서 에디터 권장 프리셋 (Resume Editor Presets)
+   * ───────────────────────────────────────── */
+
+  /* 성명 타이틀 (이름) */
+  --is-resume-name: 700;
+
+  /* 섹션 제목 ("경력사항", "학력", "자격증") */
+  --is-resume-section: 600;
+
+  /* 회사명, 직책 */
+  --is-resume-company: 500;
+
+  /* 본문 텍스트 (기본) */
+  --is-resume-body: 400;
+
+  /* 보충 설명, 부가 정보 */
+  --is-resume-caption: 350;
+
+  /* ─────────────────────────────────────────
+   * 자소서 프리셋 (Cover Letter Presets)
+   * ───────────────────────────────────────── */
+
+  /* 자소서 항목명 */
+  --is-coverletter-title: 600;
+
+  /* 자소서 본문 */
+  --is-coverletter-body: 400;
+
+  /* ─────────────────────────────────────────
+   * 경력기술서 프리셋 (Project Description Presets)
+   * ───────────────────────────────────────── */
+
+  /* 프로젝트명 */
+  --is-project-title: 700;
+
+  /* 역할, 기술 스택 */
+  --is-project-role: 600;
+
+  /* 상세 설명 */
+  --is-project-description: 400;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   이용 예시 (Usage Examples)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* 예시 1: HTML 클래스 스타일링 */
+
+.resume-name {
+  font-weight: var(--is-resume-name);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.resume-section {
+  font-weight: var(--is-resume-section);
+  font-size: 13px;
+  line-height: 1.4;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.resume-company {
+  font-weight: var(--is-resume-company);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.resume-body {
+  font-weight: var(--is-resume-body);
+  font-size: 11px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.resume-caption {
+  font-weight: var(--is-resume-caption);
+  font-size: 10px;
+  line-height: 1.4;
+  color: #666;
+}
+
+/* 예시 2: 자소서 스타일 */
+
+.coverletter-title {
+  font-weight: var(--is-coverletter-title);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.coverletter-body {
+  font-weight: var(--is-coverletter-body);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* 예시 3: 경력기술서 스타일 */
+
+.project-title {
+  font-weight: var(--is-project-title);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.project-role {
+  font-weight: var(--is-project-role);
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.project-description {
+  font-weight: var(--is-project-description);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   반응형 및 화면 크기별 조정 (Responsive Adjustments)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* 모바일 환경에서는 크기는 줄이되, 굵기는 유지 */
+@media (max-width: 600px) {
+  .resume-name {
+    font-size: 16px;
+  }
+
+  .resume-section {
+    font-size: 12px;
+  }
+
+  .resume-body {
+    font-size: 10px;
+  }
+}
+
+/* 프린트 환경에서는 더 확실한 대비 필요 (선택적) */
+@media print {
+  .resume-body {
+    font-weight: var(--is-weight-regular);
+  }
+
+  .resume-section {
+    font-weight: var(--is-weight-bold); /* 인쇄시 더 진하게 */
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Variable Font 호환성 노트
+   ═══════════════════════════════════════════════════════════════
+
+   Incruit Sans는 Variable Font를 지원합니다.
+
+   wght (weight) 축 범위: 100–900
+
+   CSS font-weight 값과의 매핑:
+   - 100: Thin
+   - 300: Light
+   - 350: Thin/Light (사용자 정의)
+   - 400: Regular (표준)
+   - 500: Medium (표준)
+   - 600: SemiBold (표준)
+   - 700: Bold (표준)
+   - 800: ExtraBold (사용자 정의)
+   - 900: Black
+
+   모든 브라우저에서 font-weight 값을 직접 사용할 수 있습니다:
+   font-weight: 350;   ✓ Variable Font에서 지원
+   font-weight: 800;   ✓ Variable Font에서 지원
+
+   ═══════════════════════════════════════════════════════════════ */

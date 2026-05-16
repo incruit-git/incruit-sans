@@ -1,0 +1,81 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Python
+venv/
+env/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build output (재생성 가능 — git 미포함)
+fonts/
+*.otf
+*.ttf
+*.woff
+*.woff2
+
+# Build pipeline 참고용 폰트 파일 (다른 프로젝트에서 복사한 것)
+build/*.otf
+build/*.ttf
+build/*.woff
+build/*.woff2
+build/ttf/
+build/ttf-pre-hint/
+build/web/
+
+# 빌드 임시 파일
+*.designspace
+master_ufo/
+instance_ufo/
+variable_ttf/
+master_ttf_interpolatable/
+master_ufo_interpolatable/
+
+# Glyphs 백업 (수동 복원용 — 필요 시 해제)
+sources/*.glyphs.backup
+
+# OS / Editor
+*.bak
+*.tmp
+*~
+.~lock.*
+
+# 로그
+*.log
+npm-debug.log*
+
+# 환경 파일
+.env
+.env.local
+.env.*.local
+
+# bkit / Claude
+.bkit/cache/
+.claude/cache/
+
+# Node (npm 배포 시)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 테스트 산출물
+coverage/
+playwright-report/
+test-results/
