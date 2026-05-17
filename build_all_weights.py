@@ -13,6 +13,7 @@ from fontTools.pens.t2CharStringPen import T2CharStringPen
 
 sys.path.insert(0, str(Path(__file__).parent / 'build'))
 from retune_tabular_digits import retune_font
+from fix_j_overhang import fix_j
 
 ROOT = Path(__file__).parent
 SOURCE = ROOT / 'source'
@@ -162,10 +163,12 @@ def build_one(weight_name, weight_value):
 
     # Tabular digit center re-alignment (spread → 0 UPM)
     retune_font(base, verbose=False)
+    # j descender left overhang fix (LSB → -42, prevents overlap with 25 chars)
+    fix_j(base, verbose=False)
 
     output_path = BUILD / f'{new_psname}.otf'
     base.save(str(output_path))
-    print(f"  ✓ {new_psname}.otf  (replaced {replaced} latin, retuned tabular digits)")
+    print(f"  ✓ {new_psname}.otf  (replaced {replaced} latin, retuned digits, fixed j)")
     return True
 
 
