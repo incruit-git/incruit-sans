@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Digit Alignment Test — Tabular Figures</title>
+<style>
+@font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-Regular.otf') format('opentype'); font-weight: 400; }
+@font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-Medium.otf') format('opentype'); font-weight: 500; }
+@font-face { font-family: 'Incruit Sans'; src: url('../build/IncruitSans-Bold.otf') format('opentype'); font-weight: 700; }
+@font-face { font-family: 'Incruit Sans Backup'; src: url('https://example.invalid/none.otf') format('opentype'); font-weight: 400; }
+
+* { box-sizing: border-box; }
+body { margin: 0; padding: 40px; background: #fafafa; color: #1a1a1a; font-family: 'Incruit Sans', system-ui, sans-serif; }
+h1 { margin: 0 0 8px; font-size: 28px; font-weight: 700; }
+h2 { margin: 32px 0 12px; font-size: 18px; font-weight: 600; color: #555; }
+.note { font-size: 13px; color: #888; margin-bottom: 20px; }
+
+.test-block {
+    background: white;
+    padding: 24px 32px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* CRITICAL: tabular figures + monospace-like vertical alignment */
+.tab {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+}
+.prop {
+    font-variant-numeric: proportional-nums;
+    font-feature-settings: "tnum" 0;
+}
+
+table { border-collapse: collapse; }
+td, th {
+    padding: 6px 12px;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Incruit Sans', sans-serif;
+}
+th { font-weight: 600; color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+.label { text-align: left; color: #888; font-size: 13px; }
+
+/* Single-digit column for spread visualization */
+.col-digit {
+    display: inline-block;
+    width: 1.2em;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background: #fff9e6;
+}
+.digit-row { font-size: 56px; line-height: 1.1; letter-spacing: 0; margin: 8px 0; }
+.digit-row .col-digit + .col-digit { border-left: none; }
+
+.grid-overlay {
+    position: relative;
+    display: inline-block;
+}
+.grid-overlay::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255, 0, 0, 0.4);
+    transform: translateX(-0.5px);
+    pointer-events: none;
+}
+
+.col-digit-overlay {
+    display: inline-block;
+    position: relative;
+    width: 1.2em;
+    text-align: center;
+}
+.col-digit-overlay::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    bottom: 5%;
+    width: 1px;
+    background: rgba(255, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.col {
+    padding: 4px 0;
+    border-left: 1px dashed rgba(0,0,0,0.1);
+    border-right: 1px dashed rgba(0,0,0,0.1);
+}
+</style>
+</head>
+<body>
+
+<h1>Incruit Sans — Tabular Digit Alignment Test</h1>
+<p class="note">Each digit cell shows red center line. Tabular digit visual center should align with cell center. Patched fonts: spread 71→0 UPM at Regular.</p>
+
+<div class="test-block">
+<h2>① 자릿수 컬럼 정렬 (tabular, Regular 22px)</h2>
+<table class="tab">
+<tr><th>Description</th><th>Value</th></tr>
+<tr><td class="label">월 급여 (KRW)</td><td>3,200,000</td></tr>
+<tr><td class="label">연봉 (KRW)</td><td>50,000,000</td></tr>
+<tr><td class="label">상여금</td><td>8,500,000</td></tr>
+<tr><td class="label">총액</td><td>67,300,000</td></tr>
+<tr><td class="label">단가 (USD)</td><td>1,234.56</td></tr>
+<tr><td class="label">소수점</td><td>95.5%</td></tr>
+<tr><td class="label">GPA</td><td>3.85 / 4.5</td></tr>
+</table>
+</div>
+
+<div class="test-block">
+<h2>② 날짜 정렬 (tabular)</h2>
+<table class="tab">
+<tr><td class="label">근무 기간</td><td>2024.03 — 2026.04</td></tr>
+<tr><td class="label">학력</td><td>2017.03 — 2021.02</td></tr>
+<tr><td class="label">인턴</td><td>2020.07 — 2020.12</td></tr>
+<tr><td class="label">자격증</td><td>2023.11.28</td></tr>
+</table>
+</div>
+
+<div class="test-block">
+<h2>③ 숫자 0-9 컬럼 균일성 (red line = cell center)</h2>
+<p class="note">각 빨간 선은 셀 중심. 패치 후 모든 숫자 글리프 중심이 빨간 선과 일치해야 함.</p>
+<div class="digit-row tab grid-overlay">
+    <span class="col-digit-overlay">0</span><span class="col-digit-overlay">1</span><span class="col-digit-overlay">2</span><span class="col-digit-overlay">3</span><span class="col-digit-overlay">4</span><span class="col-digit-overlay">5</span><span class="col-digit-overlay">6</span><span class="col-digit-overlay">7</span><span class="col-digit-overlay">8</span><span class="col-digit-overlay">9</span>
+</div>
+</div>
+
+<div class="test-block">
+<h2>④ 비교 — proportional (tnum off, 참조)</h2>
+<div class="digit-row prop">
+    <span class="col-digit-overlay">0</span><span class="col-digit-overlay">1</span><span class="col-digit-overlay">2</span><span class="col-digit-overlay">3</span><span class="col-digit-overlay">4</span><span class="col-digit-overlay">5</span><span class="col-digit-overlay">6</span><span class="col-digit-overlay">7</span><span class="col-digit-overlay">8</span><span class="col-digit-overlay">9</span>
+</div>
+<p class="note">Proportional 모드: 자연스러운 폭, 중심 비대칭 정상 (특히 '1')</p>
+</div>
+
+<div class="test-block">
+<h2>⑤ 무게별 검증 (tabular)</h2>
+<table class="tab" style="font-size: 28px;">
+<tr><td class="label" style="font-weight:400">Regular</td><td style="font-weight:400">1234567890</td></tr>
+<tr><td class="label" style="font-weight:500">Medium</td><td style="font-weight:500">1234567890</td></tr>
+<tr><td class="label" style="font-weight:700">Bold</td><td style="font-weight:700">1234567890</td></tr>
+</table>
+</div>
+
+<div class="test-block">
+<h2>⑥ 큰 표 (이력서 시뮬레이션)</h2>
+<table class="tab" style="font-size:14px; width:100%; max-width:600px">
+<tr><th>경력</th><th>회사</th><th>연봉</th></tr>
+<tr><td>2024.03 — 현재</td><td>인크루트</td><td>72,000,000</td></tr>
+<tr><td>2021.07 — 2024.02</td><td>네이버</td><td>58,000,000</td></tr>
+<tr><td>2019.03 — 2021.06</td><td>카카오</td><td>45,000,000</td></tr>
+<tr><td>2017.09 — 2019.02</td><td>토스</td><td>38,500,000</td></tr>
+</table>
+</div>
+
+</body>
+</html>
