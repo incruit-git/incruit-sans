@@ -3,12 +3,16 @@ Incruit Sans v0.2 — 9 weights 일괄 빌드
 Pretendard 한글 + Min Sans 라틴 (각 9 weights)
 """
 import copy
+import sys
 from pathlib import Path
 from fontTools.ttLib import TTFont
 from fontTools.subset import Subsetter, Options
 from fontTools.pens.transformPen import TransformPen
 from fontTools.misc.transform import Transform
 from fontTools.pens.t2CharStringPen import T2CharStringPen
+
+sys.path.insert(0, str(Path(__file__).parent / 'build'))
+from retune_tabular_digits import retune_font
 
 ROOT = Path(__file__).parent
 SOURCE = ROOT / 'source'
@@ -156,9 +160,12 @@ def build_one(weight_name, weight_value):
     if hasattr(base_top, 'Weight'):
         base_top.Weight = weight_name
 
+    # Tabular digit center re-alignment (spread → 0 UPM)
+    retune_font(base, verbose=False)
+
     output_path = BUILD / f'{new_psname}.otf'
     base.save(str(output_path))
-    print(f"  ✓ {new_psname}.otf  (replaced {replaced} latin)")
+    print(f"  ✓ {new_psname}.otf  (replaced {replaced} latin, retuned tabular digits)")
     return True
 
 

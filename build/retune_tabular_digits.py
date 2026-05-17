@@ -65,42 +65,45 @@ def shift_cff(font, gname, dx):
     cs_dict[gname] = new_cs
 
 
-def patch_font(path: Path):
-    print(f"\n>>> {path}")
-    font = TTFont(str(path))
+def retune_font(font, verbose=True):
+    """Re-center tabular digits in-place on a TTFont instance.
+
+    Returns dict of {digit: shift_applied} or {} if no digits found.
+    """
     cmap = font.getBestCmap()
     is_cff = "CFF " in font
 
-    # Gather digit metrics
     rows = []
     for d in DIGITS:
         cp = ord(d)
         gname = cmap.get(cp)
         if not gname:
-            print(f"  skip: U+{cp:04X} not in cmap")
             continue
         adv, lsb, w, xMin, xMax = measure(font, gname)
         center = lsb + w / 2
         rows.append((d, gname, adv, lsb, w, xMin, xMax, center))
 
     if not rows:
-        print("  no digits — skip")
-        return
+        return {}
 
     advances = {r[2] for r in rows}
-    if len(advances) > 1:
+    if len(advances) > 1 and verbose:
         print(f"  WARN: digits have multiple advances {advances} — not tabular")
     adv = rows[0][2]
     target_center = adv / 2.0
 
-    print(f"  adv={adv}  target_center={target_center:.1f}  format={'CFF' if is_cff else 'glyf'}")
-    print(f"  {'d':<4}{'gname':<14}{'lsb_old':>8}{'w':>6}{'cen_old':>10}{'shift':>8}{'lsb_new':>10}")
+    if verbose:
+        print(f"  adv={adv}  target_center={target_center:.1f}  format={'CFF' if is_cff else 'glyf'}")
+        print(f"  {'d':<4}{'gname':<14}{'lsb_old':>8}{'w':>6}{'cen_old':>10}{'shift':>8}{'lsb_new':>10}")
 
+    shifts = {}
     for d, gname, adv, lsb, w, xMin, xMax, center in rows:
         shift = target_center - center
         shift_int = int(round(shift))
         new_lsb = int(round(lsb + shift_int))
-        print(f"  {d:<4}{gname:<14}{lsb:>8}{w:>6.0f}{center:>10.1f}{shift_int:>8}{new_lsb:>10}")
+        shifts[d] = shift_int
+        if verbose:
+            print(f"  {d:<4}{gname:<14}{lsb:>8}{w:>6.0f}{center:>10.1f}{shift_int:>8}{new_lsb:>10}")
         if shift_int == 0:
             continue
         if is_cff:
@@ -108,8 +111,16 @@ def patch_font(path: Path):
         else:
             shift_glyf(font, gname, shift_int)
         font["hmtx"][gname] = (adv, new_lsb)
+    return shifts
 
-    # Save
+
+def patch_font(path: Path):
+    print(f"\n>>> {path}")
+    font = TTFont(str(path))
+    shifts = retune_font(font, verbose=True)
+    if not shifts:
+        print("  no digits — skip")
+        return
     font.save(str(path))
     print(f"  saved.")
 
