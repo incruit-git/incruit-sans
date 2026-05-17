@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Latin + Hangul Spacing Test</title>
+<style>
+@font-face { font-family: 'Incruit Sans'; src: url('../build/web/IncruitSans-Regular.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'Incruit Sans'; src: url('../build/web/IncruitSans-Bold.woff2') format('woff2'); font-weight: 700; }
+@font-face { font-family: 'Pretendard'; src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2'); font-weight: 400; }
+
+body { margin: 0; padding: 40px; background: #fafafa; color: #1a1a1a; font-family: 'Incruit Sans', sans-serif; max-width: 1100px; }
+h1 { margin: 0 0 8px; font-size: 26px; }
+h2 { margin: 28px 0 10px; font-size: 16px; color: #555; }
+.block { background: white; padding: 22px 28px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.sample { font-size: 32px; line-height: 1.4; }
+.small { font-size: 18px; }
+.compare { display: grid; grid-template-columns: 80px 1fr; gap: 14px; align-items: center; padding: 6px 0; border-bottom: 1px dashed #eee; }
+.compare:last-child { border-bottom: none; }
+.compare .tag { font-size: 11px; color: #666; font-family: monospace; }
+.pret { font-family: 'Pretendard', sans-serif; }
+.incr { font-family: 'Incruit Sans', sans-serif; }
+.bg-grid { background-image: linear-gradient(to right, rgba(255,0,0,0.08) 0, rgba(255,0,0,0.08) 1px, transparent 1px, transparent 100%); background-size: 1em 100%; }
+
+/* Hangul column box */
+.han-row { font-size: 48px; line-height: 1.3; }
+.han-row span {
+    display: inline-block;
+    width: 1.05em;
+    text-align: center;
+    border: 1px solid #ddd;
+    background: #fff9e6;
+    position: relative;
+}
+.han-row span::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    bottom: 8%;
+    width: 1px;
+    background: rgba(255,0,0,0.4);
+}
+.han-row span + span { border-left: none; }
+</style>
+</head>
+<body>
+
+<h1>Incruit Sans — Latin + Hangul Spacing 검증</h1>
+<p style="color:#888; font-size:13px">WOFF2 기반 (build/web/*.woff2). 패치 이후 metrics 검증.</p>
+
+<!-- ============ Latin: j 돌출 ============ -->
+<div class="block">
+<h2>① 영문 `j` 디센더 좌측 돌출 검증</h2>
+<div class="label">IncruitSans LSB=-132 vs Pretendard LSB=-42 (90 UPM 더 음수)</div>
+<div class="sample">aj  ij  oj  uj  Aj</div>
+<div class="sample">enjoy injection adjust object</div>
+<div class="sample bg-grid">jjjj  major  enjoyable  rejoice</div>
+
+<h2 style="margin-top:24px">↑↓ Pretendard 비교</h2>
+<div class="compare">
+    <span class="tag">Pretendard</span>
+    <span class="sample pret">aj ij oj enjoy injection adjust</span>
+</div>
+<div class="compare">
+    <span class="tag">IncruitSans</span>
+    <span class="sample incr">aj ij oj enjoy injection adjust</span>
+</div>
+<p class="label" style="margin-top:10px">→ `j` 디센더가 앞 글자(a/i/o) 우측을 침범하는지 시각 확인</p>
+</div>
+
+<!-- ============ Latin general ============ -->
+<div class="block">
+<h2>② 영문 기본 (a-z, A-Z, 흔한 단어)</h2>
+<div class="sample">The quick brown fox jumps over the lazy dog</div>
+<div class="sample">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+<div class="sample">abcdefghijklmnopqrstuvwxyz</div>
+<div class="sample small">React Engineer · Software Developer · Product Manager</div>
+<div class="sample small">Google · Apple · Microsoft · Amazon · Meta · Netflix</div>
+</div>
+
+<!-- ============ Latin advance compare ============ -->
+<div class="block">
+<h2>③ Latin advance — Pretendard 대비 +5~6% 확장 여부</h2>
+<div class="compare">
+    <span class="tag">Pretendard</span>
+    <span class="sample pret">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+</div>
+<div class="compare">
+    <span class="tag">IncruitSans</span>
+    <span class="sample incr">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+</div>
+<div class="compare">
+    <span class="tag">Pretendard</span>
+    <span class="sample pret">React 개발자 50,000,000원</span>
+</div>
+<div class="compare">
+    <span class="tag">IncruitSans</span>
+    <span class="sample incr">React 개발자 50,000,000원</span>
+</div>
+<p class="label">→ Incruit가 가로 폭이 미세하게 넓어졌는지 비교</p>
+</div>
+
+<!-- ============ Hangul 가나다 ============ -->
+<div class="block">
+<h2>④ 한글 정사각 박스 내 글리프 정렬 (ㄴ+ㅣ 계열 우편향)</h2>
+<div class="label">정상 LSB 30-180, 아래 LSB=184-188 (우측 쏠림 가능)</div>
+<div class="han-row">
+    <span>가</span><span>나</span><span>다</span><span>라</span><span>마</span><span>바</span><span>사</span><span>아</span>
+</div>
+<div class="han-row">
+    <span>니</span><span>닉</span><span>닌</span><span>닐</span><span>닒</span><span>님</span><span>닙</span><span>닛</span><span>닝</span><span>닞</span>
+</div>
+<p class="label">→ 윗 줄(가나다…)은 LSB 정상. 아랫 줄(ㄴ+ㅣ 계열) 글리프가 빨간 중심선 대비 우측으로 쏠리는지 확인</p>
+</div>
+
+<!-- ============ Hangul body ============ -->
+<div class="block">
+<h2>⑤ 한글 본문 + 영문/숫자 혼용</h2>
+<div class="sample small">이력서 작성 시 가장 중요한 것은 본인의 경력과 역량을 명확히 전달하는 것입니다.</div>
+<div class="sample small">5년 이상의 React 개발 경험과 50,000,000원 규모 프로젝트 리딩 경력을 보유하고 있습니다.</div>
+<div class="sample small">2024.03 — 현재  ·  인크루트(주)  ·  Senior Engineer  ·  CTO 직속</div>
+</div>
+
+<!-- ============ Hangul micro ============ -->
+<div class="block">
+<h2>⑥ 한글 자모 카운터 가독성 (작은 크기)</h2>
+<div style="font-size:11px; line-height:1.5">11pt: 인크루트는 1991년 설립된 국내 최초의 종합 채용 정보 플랫폼입니다. 이력서, 자기소개서, 면접 등 채용 전 과정을 지원합니다.</div>
+<div style="font-size:13px; line-height:1.5; margin-top:8px">13pt: 인크루트는 1991년 설립된 국내 최초의 종합 채용 정보 플랫폼입니다.</div>
+<div style="font-size:16px; line-height:1.5; margin-top:8px">16pt: 인크루트는 1991년 설립된 국내 최초의 종합 채용 정보 플랫폼.</div>
+</div>
+
+<!-- ============ Bold ============ -->
+<div class="block">
+<h2>⑦ Bold (이름 / 헤딩)</h2>
+<div class="sample" style="font-weight:700">이광석 · 인크루트 의장 · CHO</div>
+<div class="sample" style="font-weight:700">2026 Q2 채용 트렌드 리포트</div>
+<div class="sample" style="font-weight:700">aj ij oj — j descender 확인</div>
+</div>
+
+</body>
+</html>
