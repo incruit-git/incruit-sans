@@ -40,4 +40,21 @@ for w in WEIGHTS:
 print("\n[VF TTF → woff/woff2]")
 total += convert(SRC / 'IncruitSans-VF.ttf', DEST, 'IncruitSans-VF')
 
+# 작은 사이즈/UI용 hinted (build/ttf → web/hinted, woff2만)
+HINTED_SRC = ROOT / 'build' / 'ttf'
+HINTED_DEST = DEST / 'hinted'
+HINTED_DEST.mkdir(parents=True, exist_ok=True)
+print("\n[9 weights hinted TTF → woff2]")
+for w in WEIGHTS:
+    src_path = HINTED_SRC / f'IncruitSans-{w}.ttf'
+    if not src_path.exists():
+        print(f"  SKIP {src_path.name}: not found")
+        continue
+    font = TTFont(str(src_path))
+    font.flavor = 'woff2'
+    out = HINTED_DEST / f'IncruitSans-{w}.woff2'
+    font.save(str(out))
+    print(f"  ✓ hinted/{out.name:36s}  {out.stat().st_size // 1024} KB")
+    total += 1
+
 print(f"\nDone. Generated {total} files in {DEST}")

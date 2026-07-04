@@ -100,19 +100,24 @@ Major 결함 없음. 26개 검토 권장 글리프는 희귀 문자/대시 류.
 | `build/retune_tabular_digits.py` | Tabular digit 중심 재정렬 (v0.2.1) |
 | `build/fix_j_overhang.py` | j 좌측 돌출 수정 (v0.2.1) |
 | `build/recenter_hangul_outliers.py` | Hangul outlier 재정렬 (v0.2.2) |
-| `build_all_weights.py` (통합) | OTF 빌드 시 자동 retune + fix_j |
+| `build/distinguish_pass.py` | 이력서 판별성 l-tail + 0-dot (2026-07-05) |
+| `build/build_ttf_vf.py` | OTF→보간 호환 TTF 변환 (2026-07-05) |
+| `build/build_vf_v2.py` + `compat_fix.py` | VF 재건 + 비호환 글리프 호환화 (2026-07-05) |
+| `build_all_weights.py` (통합) | OTF 빌드 시 자동 retune + fix_j + 판별성 + 표준 정합 |
 
 ---
 
-## 4. v0.2.2 출시 체크리스트
+## 4. 출시 체크리스트 (2026-07-05 갱신 — 릴리스 범위가 v0.2.2를 초과)
 
 - [x] Tier 1.1 Hangul outlier fix (PR #5)
 - [x] Tier 1.2~1.4 audit complete (no code change needed)
-- [x] All artifact files updated (47 binary)
-- [x] WOFF/WOFF2 repacked
-- [ ] v0.2.2 tag + GitHub Release
-- [ ] Release notes 작성
-- [ ] CHANGELOG.md 업데이트
+- [x] All artifact files updated (47 binary → 2026-07-05 전량 재생성)
+- [x] WOFF/WOFF2 repacked (+ web/hinted 재생성)
+- [x] CHANGELOG.md 업데이트 ([미릴리스] 섹션)
+- [x] Release notes 초안 (`docs/release-notes-draft.md`)
+- [x] 표준 검증 (fontbakery — `docs/font-quality-verification-2026-07-05.md`)
+- [ ] **버전 결정 (의장): v0.2.2 vs v0.3** — 판별성+VF 재건은 v0.2.2 범위 초과, v0.3 권고
+- [ ] tag + GitHub Release (버전 결정 후)
 
 ---
 
