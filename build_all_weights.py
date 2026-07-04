@@ -14,6 +14,7 @@ from fontTools.pens.t2CharStringPen import T2CharStringPen
 sys.path.insert(0, str(Path(__file__).parent / 'build'))
 from retune_tabular_digits import retune_font
 from fix_j_overhang import fix_j
+from distinguish_pass import distinguish
 
 ROOT = Path(__file__).parent
 SOURCE = ROOT / 'source'
@@ -125,7 +126,7 @@ def build_one(weight_name, weight_value):
     new_style = weight_name
     new_full = f"Incruit Sans {weight_name}"
     new_psname = f"IncruitSans-{weight_name}"
-    new_version = f"Version 0.2; weight={weight_value}; Built 2026-04-25"
+    new_version = f"Version 0.2; weight={weight_value}; Built 2026-07-05"
 
     name_table = base['name']
     base['OS/2'].usWeightClass = weight_value
@@ -165,10 +166,17 @@ def build_one(weight_name, weight_value):
     retune_font(base, verbose=False)
     # j descender left overhang fix (LSB → -42, prevents overlap with 25 chars)
     fix_j(base, verbose=False)
+    # 이력서 판별성: l tail(t foot 이식) + 0 중앙 dot (의장 결정 2026-07-05)
+    distinguish(base, verbose=False)
+
+    # fontbakery B1: head.fontRevision을 name 버전 문자열(0.2)과 정합
+    base['head'].fontRevision = 0.2
+    # fontbakery B3: 병합 원본 잔재 Mac platform name 레코드 제거
+    name_table.removeNames(platformID=1)
 
     output_path = BUILD / f'{new_psname}.otf'
     base.save(str(output_path))
-    print(f"  ✓ {new_psname}.otf  (replaced {replaced} latin, retuned digits, fixed j)")
+    print(f"  ✓ {new_psname}.otf  (replaced {replaced} latin, retuned digits, fixed j, l-tail+0-dot)")
     return True
 
 
