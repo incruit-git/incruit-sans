@@ -2,7 +2,7 @@
 
 **이력서 전문 폰트 — Pretendard 한글 × Min Sans 라틴**
 
-- Version: 0.2 계열 (미릴리스 변경분 포함 — [CHANGELOG](CHANGELOG.md))
+- Version: **v0.3** ([CHANGELOG](CHANGELOG.md))
 - Last built: 2026-07-05
 - Glyphs: 한글 11,172자 (Pretendard) + 라틴 383자 (Min Sans, 2× 스케일) — 총 14,716 (VF 14,757)
 - UPM: 2048 통일
@@ -138,7 +138,7 @@ open specimen/latin-hangul-test.html    # 한·라틴 조화 진단
 
 ## 버전 요약
 
-| 항목 | v0.1 | v0.2 | 미릴리스 (2026-07-05) |
+| 항목 | v0.1 | v0.2 | v0.3 (2026-07-05) |
 |---|---|---|---|
 | Weights | 1 | 9 | 9 |
 | Variable Font | ❌ | △ (gvar 13%, 한글 Bold 불가) | ✅ **전 글리프 보간 + instances 9종** |

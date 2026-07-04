@@ -1,7 +1,7 @@
-# Release Notes 초안 — Incruit Sans v0.3 (버전은 의장 확정 대기)
+# Release Notes — Incruit Sans v0.3
 
-> GitHub Release 본문으로 그대로 사용 가능. 태그 확정 시 제목만 교체.
-> 권고 버전: **v0.3** (판별성 신기능 + VF 전면 재건은 patch 범위 초과).
+> GitHub Release 본문 (v0.3 확정 — 의장 승인 2026-07-05).
+
 
 ---
 

@@ -113,10 +113,10 @@ Major 결함 없음. 26개 검토 권장 글리프는 희귀 문자/대시 류.
 - [x] Tier 1.2~1.4 audit complete (no code change needed)
 - [x] All artifact files updated (47 binary → 2026-07-05 전량 재생성)
 - [x] WOFF/WOFF2 repacked (+ web/hinted 재생성)
-- [x] CHANGELOG.md 업데이트 ([미릴리스] 섹션)
+- [x] CHANGELOG.md 업데이트 (v0.3 섹션)
 - [x] Release notes 초안 (`docs/release-notes-draft.md`)
 - [x] 표준 검증 (fontbakery — `docs/font-quality-verification-2026-07-05.md`)
-- [ ] **버전 결정 (의장): v0.2.2 vs v0.3** — 판별성+VF 재건은 v0.2.2 범위 초과, v0.3 권고
+- [x] 버전 결정: **v0.3** (의장 승인 2026-07-05)
 - [ ] tag + GitHub Release (버전 결정 후)
 
 ---

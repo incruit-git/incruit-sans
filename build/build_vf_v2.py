@@ -164,9 +164,9 @@ def main():
     name = base['name']
     name.setName('Incruit Sans Variable', 1, 3, 1, 0x409)
     name.setName('Regular', 2, 3, 1, 0x409)
-    name.setName('Incruit Sans;Regular;Version 0.2', 3, 3, 1, 0x409)
+    name.setName('Incruit Sans;Regular;Version 0.3', 3, 3, 1, 0x409)
     name.setName('Incruit Sans Variable', 4, 3, 1, 0x409)
-    name.setName('Version 0.2; variable; Built 2026-07-05', 5, 3, 1, 0x409)
+    name.setName('Version 0.3; variable; Built 2026-07-05', 5, 3, 1, 0x409)
     name.setName('IncruitSans-Variable', 6, 3, 1, 0x409)
     name.setName('Incruit Sans', 16, 3, 1, 0x409)
     name.setName('Regular', 17, 3, 1, 0x409)
@@ -175,7 +175,7 @@ def main():
                  'Min Sans (Jinseong Kim), both licensed under SIL Open Font '
                  'License 1.1. Use, modify, and redistribute freely under the '
                  'same terms.', 13, 3, 1, 0x409)
-    base['head'].fontRevision = 0.2          # fontbakery B1
+    base['head'].fontRevision = 0.3          # fontbakery B1
 
     # fvar instance 이름을 우리 name 테이블 기준으로 재설정
     fvar = base['fvar']
