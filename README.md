@@ -2,7 +2,7 @@
 
 **이력서 전문 폰트 — Pretendard 한글 × Min Sans 라틴**
 
-- Version: **v0.3** ([CHANGELOG](CHANGELOG.md))
+- Version: **v0.4** (태그 대기 — [CHANGELOG](CHANGELOG.md), 최근 릴리스 [v0.3](https://github.com/incruit-git/incruit-sans/releases/tag/v0.3))
 - Last built: 2026-07-05
 - Glyphs: 한글 11,172자 (Pretendard) + 라틴 383자 (Min Sans, 2× 스케일) — 총 14,716 (VF 14,757)
 - UPM: 2048 통일
@@ -22,6 +22,7 @@
 | **`0` 중앙점** | 숫자 0에 중앙 다이아몬드 dot — `O`와 구분 (전화번호·사번) |
 | **등폭 숫자 정렬** | tabular 숫자 중심선 스프레드 0 UPM — 표·연봉·기간 세로 정렬 (9웨이트+VF 전 구간) |
 | **한·영 수직 정합** | 수직 메트릭 9웨이트+VF 완전 동일 (hhea/typo/win) |
+| **chws 문맥 자간** | 전각 구두점 연쇄 시 반각화(。、！？（） 등) — 렌더러 기본 적용 (v0.4) |
 
 시각 확인: `specimen/specimen-resume.html`
 
@@ -150,7 +151,6 @@ open specimen/latin-hangul-test.html    # 한·라틴 조화 진단
 
 | 작업 | 효과 | 규모 |
 |---|---|---|
-| chws/vchw 탑재 (`chws_tool`) | 한글 구두점 문맥 자간 — CJK 조판 품질 | 1일 (툴링) |
 | GPOS 라틴-한글 커닝 페어 | 한·영 혼용 시각 어긋남 보정 | 2일 |
 | 인크루트 핵심 글자 커스텀 | "인크루트", "채용" 등 BI 강화 | 1주 (Glyphs 3) |
 | CDN 배포 | incruit 서비스 통합 사용 | 1일 |

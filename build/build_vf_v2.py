@@ -164,9 +164,9 @@ def main():
     name = base['name']
     name.setName('Incruit Sans Variable', 1, 3, 1, 0x409)
     name.setName('Regular', 2, 3, 1, 0x409)
-    name.setName('Incruit Sans;Regular;Version 0.3', 3, 3, 1, 0x409)
+    name.setName('Incruit Sans;Regular;Version 0.4', 3, 3, 1, 0x409)
     name.setName('Incruit Sans Variable', 4, 3, 1, 0x409)
-    name.setName('Version 0.3; variable; Built 2026-07-05', 5, 3, 1, 0x409)
+    name.setName('Version 0.4; variable; Built 2026-07-05', 5, 3, 1, 0x409)
     name.setName('IncruitSans-Variable', 6, 3, 1, 0x409)
     name.setName('Incruit Sans', 16, 3, 1, 0x409)
     name.setName('Regular', 17, 3, 1, 0x409)
@@ -175,7 +175,7 @@ def main():
                  'Min Sans (Jinseong Kim), both licensed under SIL Open Font '
                  'License 1.1. Use, modify, and redistribute freely under the '
                  'same terms.', 13, 3, 1, 0x409)
-    base['head'].fontRevision = 0.3          # fontbakery B1
+    base['head'].fontRevision = 0.4          # fontbakery B1
 
     # fvar instance 이름을 우리 name 테이블 기준으로 재설정
     fvar = base['fvar']
@@ -221,10 +221,17 @@ def main():
     out = BUILD / 'IncruitSans-VF.ttf'
     base.save(str(out))
 
+    # chws 한글 구두점 문맥 자간 (Q4): 대상 전각 구두점 어드밴스는 전 웨이트
+    # 1920 불변(2026-07-05 실측)이라 정적 GPOS 값이 VF에서도 정확하다.
+    import chws_tool
+    chws_tool.add_chws(out)
+
     vf = TTFont(str(out), lazy=True)
     gv = vf['gvar'].variations
+    feats = sorted({fr.FeatureTag for fr in vf['GPOS'].table.FeatureList.FeatureRecord})
     print(f'  ✓ {out.name}: instances={len(vf["fvar"].instances)}, '
-          f'gvar 보유 글리프={sum(1 for g in gv if gv[g])}/{vf["maxp"].numGlyphs}')
+          f'gvar 보유 글리프={sum(1 for g in gv if gv[g])}/{vf["maxp"].numGlyphs}, '
+          f'chws={"chws" in feats}')
 
 
 if __name__ == '__main__':

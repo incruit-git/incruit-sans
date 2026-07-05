@@ -1,5 +1,11 @@
 # Incruit Sans — Changelog
 
+## v0.4 [미릴리스] — 2026-07-05
+- **chws 한글 구두점 문맥 자간 탑재** (chws_tool·halt 포함): 전각 문장부호(。、！？（） 등) 연쇄 시
+  선행 부호 반각화(1920→960) — 9웨이트 OTF + VF 전체. Chrome·CoreText 등 렌더러가 기본 적용
+- vchw는 세로쓰기 테이블(vmtx) 부재로 대상 아님 (fontbakery WARN 잔존은 예상 동작)
+- 빌드 파이프라인에 chws 후처리 편입 (build_all_weights.py·build_vf_v2.py) — 폰트 내부 버전 0.4
+
 ## v0.3 — 2026-07-05
 - **이력서 판별성**: `l` 꼬리(자족 `t` foot 이식) + `0` 중앙점 — 9웨이트+VF 전체 (Il1·0O 구분, 의장 결정)
 - **VF 전면 재건**: Pretendard Variable 기반 + 라틴 gvar 이식 — gvar 보유 1,950 → **14,738/14,757** 글리프

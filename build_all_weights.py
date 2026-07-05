@@ -1,5 +1,5 @@
 """
-Incruit Sans v0.3 — 9 weights 일괄 빌드
+Incruit Sans v0.4 — 9 weights 일괄 빌드
 Pretendard 한글 + Min Sans 라틴 (각 9 weights)
 """
 import copy
@@ -126,7 +126,7 @@ def build_one(weight_name, weight_value):
     new_style = weight_name
     new_full = f"Incruit Sans {weight_name}"
     new_psname = f"IncruitSans-{weight_name}"
-    new_version = f"Version 0.3; weight={weight_value}; Built 2026-07-05"
+    new_version = f"Version 0.4; weight={weight_value}; Built 2026-07-05"
 
     name_table = base['name']
     base['OS/2'].usWeightClass = weight_value
@@ -137,7 +137,7 @@ def build_one(weight_name, weight_value):
         elif record.nameID == 2:
             record.string = new_style.encode(record.getEncoding())
         elif record.nameID == 3:
-            record.string = f"Incruit Sans;{weight_name};Version 0.3".encode(record.getEncoding())
+            record.string = f"Incruit Sans;{weight_name};Version 0.4".encode(record.getEncoding())
         elif record.nameID == 4:
             record.string = new_full.encode(record.getEncoding())
         elif record.nameID == 5:
@@ -169,14 +169,20 @@ def build_one(weight_name, weight_value):
     # 이력서 판별성: l tail(t foot 이식) + 0 중앙 dot (의장 결정 2026-07-05)
     distinguish(base, verbose=False)
 
-    # fontbakery B1: head.fontRevision을 name 버전 문자열(0.3)과 정합
-    base['head'].fontRevision = 0.3
+    # fontbakery B1: head.fontRevision을 name 버전 문자열(0.4)과 정합
+    base['head'].fontRevision = 0.4
     # fontbakery B3: 병합 원본 잔재 Mac platform name 레코드 제거
     name_table.removeNames(platformID=1)
 
     output_path = BUILD / f'{new_psname}.otf'
     base.save(str(output_path))
-    print(f"  ✓ {new_psname}.otf  (replaced {replaced} latin, retuned digits, fixed j, l-tail+0-dot)")
+
+    # chws 한글 구두점 문맥 자간 (Q4, 2026-07-05): 전각 문장부호 연쇄 시 반각화.
+    # vchw는 세로쓰기 테이블(vmtx) 부재로 대상 아님. in-place 갱신.
+    import chws_tool
+    chws_tool.add_chws(output_path)
+
+    print(f"  ✓ {new_psname}.otf  (replaced {replaced} latin, retuned digits, fixed j, l-tail+0-dot, chws)")
     return True
 
 
