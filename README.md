@@ -2,7 +2,7 @@
 
 **이력서 전문 폰트 — Pretendard 한글 × Min Sans 라틴**
 
-- Version: **v0.4** (태그 대기 — [CHANGELOG](CHANGELOG.md), 최근 릴리스 [v0.3](https://github.com/incruit-git/incruit-sans/releases/tag/v0.3))
+- Version: **v0.4.2** (폰트 바이너리 = v0.4 — [CHANGELOG](CHANGELOG.md), 최근 릴리스 [v0.4](https://github.com/incruit-git/incruit-sans/releases/tag/v0.4))
 - Last built: 2026-07-05
 - Glyphs: 한글 11,172자 (Pretendard) + 라틴 383자 (Min Sans, 2× 스케일) — 총 14,716 (VF 14,757)
 - UPM: 2048 통일
@@ -85,13 +85,13 @@ repo에 커밋된 `web/*.css`를 jsDelivr 태그 핀 URL로 바로 사용한다.
 
 ```html
 <!-- 정적 9웨이트 (일반 본문) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.1/web/incruit-sans.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.2/web/incruit-sans.css">
 
 <!-- 소형 UI·Windows 최적화 (ttfautohint) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.1/web/incruit-sans-hinted.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.2/web/incruit-sans-hinted.css">
 
 <!-- Variable Font 단일 파일 (family: 'Incruit Sans Variable') -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.1/web/incruit-sans-vf.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.2/web/incruit-sans-vf.css">
 ```
 
 ```css
@@ -176,7 +176,6 @@ open specimen/latin-hangul-test.html    # 한·라틴 조화 진단
 | 작업 | 효과 | 규모 |
 |---|---|---|
 | 인크루트 핵심 글자 커스텀 | "인크루트", "채용" 등 BI 강화 | 1주 (Glyphs 3) |
-| CDN 배포 | incruit 서비스 통합 사용 | 1일 |
 | 자모 분리 디자인 (Track 2) | 진정한 자체 폰트 | 1–3개월 (디자이너 협업) |
 
 ## 라이선스 의무
