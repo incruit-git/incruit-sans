@@ -117,7 +117,7 @@ Major 결함 없음. 26개 검토 권장 글리프는 희귀 문자/대시 류.
 - [x] Release notes 초안 (`docs/release-notes-draft.md`)
 - [x] 표준 검증 (fontbakery — `docs/font-quality-verification-2026-07-05.md`)
 - [x] 버전 결정: **v0.3** (의장 승인 2026-07-05)
-- [ ] tag + GitHub Release (버전 결정 후)
+- [x] tag + GitHub Release — **v0.3 발행 완료** (2026-07-05, https://github.com/incruit-git/incruit-sans/releases/tag/v0.3)
 
 ---
 
