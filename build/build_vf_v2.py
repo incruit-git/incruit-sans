@@ -34,6 +34,7 @@ from fontTools.varLib import instancer
 
 sys.path.insert(0, str(Path(__file__).parent))
 from compat_fix import compatibilize, draw_multi
+from kern_hangul_latin import add_script_kern
 
 ROOT = Path(__file__).parent.parent
 BUILD = ROOT / 'build'
@@ -217,6 +218,9 @@ def main():
     for k in ('sTypoAscender', 'sTypoDescender', 'sTypoLineGap',
               'usWinAscent', 'usWinDescent', 'fsSelection', 'usWeightClass'):
         setattr(bo, k, getattr(so, k))
+
+    # 한글↔라틴 스크립트 경계 kern (+45/+75) — 정적판과 동일 값
+    add_script_kern(base, verbose=False)
 
     out = BUILD / 'IncruitSans-VF.ttf'
     base.save(str(out))

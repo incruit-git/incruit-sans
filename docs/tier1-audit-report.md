@@ -49,7 +49,7 @@
 - `Wc` -103 vs `cW` -2 (W 사선 끝 위 c)
 - `Yp` -79 vs `pY` -173 (descender 충돌 회피)
 
-**Gap**: Latin↔Hangul mixing kerning 없음.
+**Gap**: Latin↔Hangul mixing kerning 없음. → ✅ **2026-07-05 해소** (`build/kern_hangul_latin.py` class kern +45/+75, v0.4)
 - 영향: `React 개발자`, `50,000,000원` 등 혼용 문장에서 자간 미세 어색
 - 해결: 디자이너가 class-based kern 추가 (Latin-class ↔ Hangul-class, 단일 값)
 - **Tier 2-3 디자이너 작업 영역**

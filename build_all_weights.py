@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent / 'build'))
 from retune_tabular_digits import retune_font
 from fix_j_overhang import fix_j
 from distinguish_pass import distinguish
+from kern_hangul_latin import add_script_kern
 
 ROOT = Path(__file__).parent
 SOURCE = ROOT / 'source'
@@ -168,6 +169,8 @@ def build_one(weight_name, weight_value):
     fix_j(base, verbose=False)
     # 이력서 판별성: l tail(t foot 이식) + 0 중앙 dot (의장 결정 2026-07-05)
     distinguish(base, verbose=False)
+    # 한글↔라틴 스크립트 경계 kern (+45/+75, A/B 렌더 판정 2026-07-05)
+    add_script_kern(base, verbose=False)
 
     # fontbakery B1: head.fontRevision을 name 버전 문자열(0.4)과 정합
     base['head'].fontRevision = 0.4
