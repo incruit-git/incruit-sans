@@ -1,6 +1,14 @@
 # Incruit Sans — Changelog
 
-## v0.4 [미릴리스] — 2026-07-05
+## v0.4.1 — 2026-07-05
+- **CDN(jsDelivr) 배포 지원**: `web/incruit-sans.css`·`incruit-sans-hinted.css`·`incruit-sans-vf.css` 추가
+  — 태그 핀 URL(`@v0.4.1`)로 즉시 사용, 상대경로 url()이라 CSS와 woff2가 같은 태그로 불변 서빙
+- 디자인 토큰 이관: 구 클론(incruitsans) 미커밋분 resume 토큰 20종 + brand/body fontFamily
+  → `design-tokens/tokens.json` (토큰 SSOT를 이 repo로 단일화)
+- 저장소 위생: sources/ 42MB 중복 제거(전수 byte 비교), 빈 fonts/ 제거, 구 클론 아카이브
+- 폰트 바이너리 변경 없음 (v0.4와 동일)
+
+## v0.4 — 2026-07-05
 - **한글↔라틴 스크립트 경계 커닝** (class kern): 실측 기반 한→라 +45·라→한 +75 —
   "이력서Plus"·"2026년 AI" 같은 혼용 경계가 숨 쉬도록. 9웨이트+VF, 기존 라틴 kern 보존
 - **chws 한글 구두점 문맥 자간 탑재** (chws_tool·halt 포함): 전각 문장부호(。、！？（） 등) 연쇄 시

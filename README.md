@@ -78,6 +78,29 @@ python3 build/build_web_fonts.py      # [5] woff/woff2 + web/hinted
 
 ## 사용법
 
+### CDN (jsDelivr) — 웹 서비스 권장
+
+repo에 커밋된 `web/*.css`를 jsDelivr 태그 핀 URL로 바로 사용한다. 태그 핀 URL은 영구 캐시라
+배포 후 변하지 않으며, 버전 업그레이드 = `<link>`의 태그만 교체.
+
+```html
+<!-- 정적 9웨이트 (일반 본문) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.1/web/incruit-sans.css">
+
+<!-- 소형 UI·Windows 최적화 (ttfautohint) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.1/web/incruit-sans-hinted.css">
+
+<!-- Variable Font 단일 파일 (family: 'Incruit Sans Variable') -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.1/web/incruit-sans-vf.css">
+```
+
+```css
+body { font-family: 'Incruit Sans', Pretendard, sans-serif; }
+```
+
+> ⚠️ **`@main` 사용 금지.** `@main`은 12시간 유동 캐시라 릴리스 간 파일이 섞일 수 있고,
+> v0.3 이전의 한글 Bold 결함 VF가 캐시에 남을 수 있다. 반드시 태그를 핀한다.
+
 ### macOS에 설치
 
 ```bash

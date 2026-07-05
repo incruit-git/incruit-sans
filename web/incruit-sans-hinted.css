@@ -1,0 +1,70 @@
+/*!
+ * Incruit Sans v0.4.1 — 정적 9웨이트 (ttfautohint WOFF2, 소형 UI·Windows 렌더링 권장)
+ * https://github.com/incruit-git/incruit-sans · SIL Open Font License 1.1
+ *
+ * CDN:
+ *   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.1/web/incruit-sans-hinted.css">
+ */
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/hinted/IncruitSans-Thin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/hinted/IncruitSans-ExtraLight.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/hinted/IncruitSans-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/hinted/IncruitSans-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/hinted/IncruitSans-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/hinted/IncruitSans-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/hinted/IncruitSans-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/hinted/IncruitSans-ExtraBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/hinted/IncruitSans-Black.woff2') format('woff2');
+}

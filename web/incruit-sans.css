@@ -1,0 +1,70 @@
+/*!
+ * Incruit Sans v0.4.1 — 정적 9웨이트 (unhinted WOFF2, 일반 웹 본문 권장)
+ * https://github.com/incruit-git/incruit-sans · SIL Open Font License 1.1
+ *
+ * CDN (태그 핀 필수 — @main 사용 금지, 캐시 12h 유동):
+ *   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.1/web/incruit-sans.css">
+ */
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/IncruitSans-Thin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/IncruitSans-ExtraLight.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/IncruitSans-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/IncruitSans-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/IncruitSans-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/IncruitSans-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/IncruitSans-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/IncruitSans-ExtraBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Incruit Sans';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('../build/web/IncruitSans-Black.woff2') format('woff2');
+}
