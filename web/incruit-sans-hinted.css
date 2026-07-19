@@ -1,9 +1,9 @@
 /*!
- * Incruit Sans v0.4.2 — 정적 9웨이트 (ttfautohint WOFF2, 소형 UI·Windows 렌더링 권장)
+ * Incruit Sans v0.5.0 — 정적 9웨이트 (ttfautohint WOFF2, 소형 UI·Windows 렌더링 권장)
  * https://github.com/incruit-git/incruit-sans · SIL Open Font License 1.1
  *
  * CDN:
- *   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.2/web/incruit-sans-hinted.css">
+ *   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.5.0/web/incruit-sans-hinted.css">
  */
 @font-face {
   font-family: 'Incruit Sans';
@@ -67,4 +67,13 @@
   font-style: normal;
   font-display: swap;
   src: url('../build/web/hinted/IncruitSans-Black.woff2') format('woff2');
+}
+
+/* 판별성 0 (dotted zero) — 기본 0은 민짜, 이력서·코드 등 0/O 구분이 필요한 곳만 옵트인:
+ *   font-variant-numeric: slashed-zero;          (표준, 권장)
+ *   font-feature-settings: "zero" 1;             (구형 브라우저 폴백)
+ */
+.incruit-sans-dotted-zero {
+  font-variant-numeric: slashed-zero;
+  font-feature-settings: "zero" 1;
 }

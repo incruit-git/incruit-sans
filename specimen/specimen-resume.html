@@ -439,23 +439,28 @@
   </div>
 </div>
 
-<!-- ===== Diagnostic 0: 판별성 Il1 / 0O (2026-07-05 l-tail·0-dot) ===== -->
+<!-- ===== Diagnostic 0: 판별성 Il1 / 0O (l-tail 기본 · dotted-0은 zero feature 옵트인, 2026-07-19 v0.5) ===== -->
 <div class="diag">
   <h2>진단 0 — 문자 판별성 Il1 · 0O (이름·이메일·전화번호 오독 방지)</h2>
   <p style="font-size:11px; color:#777; margin:0 0 10px">
-    l에 꼬리, 0에 중앙점이 보여야 2026-07-05 이후 빌드. I(민바)·l(꼬리)·1(플래그) 3형이 구분되어야 정상.
+    l에 꼬리가 보여야 2026-07-05 이후 빌드. v0.5부터 기본 0은 민짜 —
+    아래 「옵트인」 행(font-variant-numeric: slashed-zero)에서만 0 중앙점이 보여야 정상.
+    I(민바)·l(꼬리)·1(플래그) 3형이 구분되어야 정상.
   </p>
   <div class="diag-grid">
     <div class="diag-cell">
       <h3>대형 (48px)</h3>
       <div style="font-size:48px; line-height:1.3">Il1 &nbsp; 0O &nbsp; Illinois</div>
       <div style="font-size:48px; line-height:1.3; font-weight:700">Il1 &nbsp; 0O &nbsp; Illinois</div>
+      <div style="font-size:48px; line-height:1.3; font-weight:700; font-variant-numeric: slashed-zero">0O 400 <span style="font-size:14px; color:#777">← 옵트인(dotted 0)</span></div>
     </div>
     <div class="diag-cell">
       <h3>이력서 실사이즈 (13px / 11px)</h3>
       <div style="font-size:13px">lIm@incruit.com · 010-2016-0O18 · Illinois 2016</div>
       <div style="font-size:11px">lIm@incruit.com · 010-2016-0O18 · Illinois 2016</div>
       <div style="font-size:13px; font-weight:700">lIm@incruit.com · 010-2016-0O18</div>
+      <div style="font-size:13px; font-variant-numeric: slashed-zero">옵트인(dotted 0): lIm@incruit.com · 010-2016-0O18</div>
+      <div style="font-size:13px; font-weight:700; font-variant-numeric: slashed-zero">옵트인(dotted 0): 010-2016-0O18</div>
     </div>
   </div>
 </div>

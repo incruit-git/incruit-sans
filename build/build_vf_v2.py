@@ -34,6 +34,7 @@ from fontTools.varLib import instancer
 
 sys.path.insert(0, str(Path(__file__).parent))
 from compat_fix import compatibilize, draw_multi
+from distinguish_pass import zero_feature_pairs
 from kern_hangul_latin import add_script_kern
 
 ROOT = Path(__file__).parent.parent
@@ -92,8 +93,14 @@ def fix_incompatible(subset_fonts):
           f'{"".join(unfixable) if unfixable else ""}')
 
 
+def static_zero_pairs():
+    """정적 OTF 기준 zero feature 매핑 [(기준, 대체), ...] — pre-hint TTF와 이름 동일."""
+    return zero_feature_pairs(TTFont(str(BUILD / 'IncruitSans-Regular.otf'), lazy=True))
+
+
 def build_latin_vf():
     """pre-hint TTF 9종을 라틴 서브셋 + 호환화 후 varLib으로 라틴 VF 빌드."""
+    ZERO_ALT_GLYPHS = [a for _, a in static_zero_pairs()]
     tmp = BUILD / 'tmp-latin'
     tmp.mkdir(exist_ok=True)
     subset_fonts = []
@@ -104,8 +111,10 @@ def build_latin_vf():
         opts.drop_tables += ['GSUB', 'GPOS', 'GDEF']
         opts.notdef_outline = True
         opts.recalc_bounds = True
+        opts.glyph_names = True   # 비인코딩 대체 글리프를 이름으로 추적 (post 2.0 유지)
         ss = Subsetter(options=opts)
-        ss.populate(unicodes=LATIN_UNICODES)
+        # dotted-0 옵트인(zero feature) 대체 글리프는 비인코딩 — 이름으로 유지
+        ss.populate(unicodes=LATIN_UNICODES, glyphs=ZERO_ALT_GLYPHS)
         ss.subset(f)
         subset_fonts.append(f)
 
@@ -161,13 +170,28 @@ def main():
         replaced += 1
     print(f'  이식 {replaced} · 스킵(컴포지트) {skipped}')
 
+    # dotted-0 옵트인(zero feature) 대체 글리프 이식 — 정적/VF 각자의 GSUB에서
+    # 매핑을 resolve해 역할(기준이 인코딩 0인 쌍 ↔ 그 외)로 대응시킨다.
+    s_pairs, v_pairs = static_zero_pairs(), zero_feature_pairs(base)
+    assert len(s_pairs) == len(v_pairs) == 2, (s_pairs, v_pairs)
+    s_zero, v_zero = l_cmap.get(0x30), b_cmap.get(0x30)
+    s_pairs.sort(key=lambda p: p[0] != s_zero)   # 인코딩 0 쌍 먼저
+    v_pairs.sort(key=lambda p: p[0] != v_zero)
+    for (s_base, s_alt), (v_base, v_alt) in zip(s_pairs, v_pairs):
+        glyph = l_glyf[s_alt]
+        assert not glyph.isComposite(), s_alt
+        b_glyf[v_alt] = glyph
+        b_gvar.variations[v_alt] = l_gvar.variations.get(s_alt, [])
+        base['hmtx'][v_alt] = latin['hmtx'][s_alt]
+        print(f'  dotted-0 이식: {s_alt} -> {v_alt} (base {s_base}/{v_base})')
+
     print('[4/4] 네이밍·STAT·instances·메트릭 정합')
     name = base['name']
     name.setName('Incruit Sans Variable', 1, 3, 1, 0x409)
     name.setName('Regular', 2, 3, 1, 0x409)
-    name.setName('Incruit Sans;Regular;Version 0.4', 3, 3, 1, 0x409)
+    name.setName('Incruit Sans;Regular;Version 0.5', 3, 3, 1, 0x409)
     name.setName('Incruit Sans Variable', 4, 3, 1, 0x409)
-    name.setName('Version 0.4; variable; Built 2026-07-05', 5, 3, 1, 0x409)
+    name.setName('Version 0.5; variable; Built 2026-07-19', 5, 3, 1, 0x409)
     name.setName('IncruitSans-Variable', 6, 3, 1, 0x409)
     name.setName('Incruit Sans', 16, 3, 1, 0x409)
     name.setName('Regular', 17, 3, 1, 0x409)
@@ -176,7 +200,7 @@ def main():
                  'Min Sans (Jinseong Kim), both licensed under SIL Open Font '
                  'License 1.1. Use, modify, and redistribute freely under the '
                  'same terms.', 13, 3, 1, 0x409)
-    base['head'].fontRevision = 0.4          # fontbakery B1
+    base['head'].fontRevision = 0.5          # fontbakery B1
 
     # fvar instance 이름을 우리 name 테이블 기준으로 재설정
     fvar = base['fvar']

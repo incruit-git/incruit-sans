@@ -2,7 +2,7 @@
 
 **이력서 전문 폰트 — Pretendard 한글 × Min Sans 라틴**
 
-- Version: **v0.4.2** (폰트 바이너리 = v0.4 — [CHANGELOG](CHANGELOG.md), 최근 릴리스 [v0.4](https://github.com/incruit-git/incruit-sans/releases/tag/v0.4))
+- Version: **v0.5.0** (폰트 바이너리 = v0.5 — [CHANGELOG](CHANGELOG.md))
 - Last built: 2026-07-05
 - Glyphs: 한글 11,172자 (Pretendard) + 라틴 383자 (Min Sans, 2× 스케일) — 총 14,716 (VF 14,757)
 - UPM: 2048 통일
@@ -19,7 +19,7 @@
 | 기능 | 내용 |
 |---|---|
 | **`l` 꼬리** | 소문자 l에 자족 `t`의 foot 곡선을 이식 — `I`(민바)·`l`(꼬리)·`1`(플래그) 완전 구분. "Illinois", "@gmail" 오독 방지 |
-| **`0` 중앙점** | 숫자 0에 중앙 다이아몬드 dot — `O`와 구분 (전화번호·사번) |
+| **`0` 중앙점 (옵트인)** | 기본 0은 민짜(대시보드 대형 숫자 미관), 이력서 등 `O` 구분이 필요한 곳만 CSS `font-variant-numeric: slashed-zero`로 다이아몬드 dot 활성 |
 | **등폭 숫자 정렬** | tabular 숫자 중심선 스프레드 0 UPM — 표·연봉·기간 세로 정렬 (9웨이트+VF 전 구간) |
 | **한·영 수직 정합** | 수직 메트릭 9웨이트+VF 완전 동일 (hhea/typo/win) |
 | **chws 문맥 자간** | 전각 구두점 연쇄 시 반각화(。、！？（） 등) — 렌더러 기본 적용 (v0.4) |
@@ -47,7 +47,7 @@ incruit-sans/
 ├── build/
 │   ├── IncruitSans-{9 weights}.otf      # ★ 디자인툴/인쇄용 (CFF)
 │   ├── IncruitSans-VF.ttf               # ★ Variable Font (wght 100-900)
-│   ├── distinguish_pass.py              # 판별성 패스 (l-tail + 0-dot) — [1]에 통합
+│   ├── distinguish_pass.py              # 판별성 패스 (l-tail + dotted-0 옵트인) — [1]에 통합
 │   ├── retune_tabular_digits.py         # tabular 재정렬 — [1]에 통합
 │   ├── fix_j_overhang.py                # j 돌출 수정 — [1]에 통합
 │   ├── build_ttf_vf.py                  # [2] OTF→보간호환 TTF (ttf-pre-hint/, gitignore)
@@ -85,13 +85,13 @@ repo에 커밋된 `web/*.css`를 jsDelivr 태그 핀 URL로 바로 사용한다.
 
 ```html
 <!-- 정적 9웨이트 (일반 본문) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.2/web/incruit-sans.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.5.0/web/incruit-sans.css">
 
 <!-- 소형 UI·Windows 최적화 (ttfautohint) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.2/web/incruit-sans-hinted.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.5.0/web/incruit-sans-hinted.css">
 
 <!-- Variable Font 단일 파일 (family: 'Incruit Sans Variable') -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.4.2/web/incruit-sans-vf.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.5.0/web/incruit-sans-vf.css">
 ```
 
 ```css
@@ -167,7 +167,7 @@ open specimen/latin-hangul-test.html    # 한·라틴 조화 진단
 |---|---|---|---|
 | Weights | 1 | 9 | 9 |
 | Variable Font | ❌ | △ (gvar 13%, 한글 Bold 불가) | ✅ **전 글리프 보간 + instances 9종** |
-| 판별성 (Il1·0O) | ❌ | ❌ | ✅ l-tail + 0-dot |
+| 판별성 (Il1·0O) | ❌ | ❌ | ✅ l-tail + dotted-0(zero feature 옵트인) |
 | 표준 준수 | — | FAIL 51+ERROR 1 | FAIL 4 (상류 유래·문서화) |
 | Hinting / WOFF2 | ❌ | ✅ | ✅ (전량 재생성) |
 

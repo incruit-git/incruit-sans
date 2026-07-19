@@ -19,3 +19,4 @@ build/ttf-pre-hint/
 
 # VF 빌드 중간 산출물
 build/tmp-latin/
+.bkit/

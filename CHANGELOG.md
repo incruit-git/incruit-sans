@@ -1,5 +1,21 @@
 # Incruit Sans — Changelog
 
+## v0.5.0 — 2026-07-19
+- **기본 `0` 민짜 복귀 (0-dot 제거)** — 의장 결정 C안: 대형 볼드 숫자(대시보드 통계 카드)에서
+  중앙점이 counter의 43%(Bold)~66%(Black)를 차지해 도형-배경이 반전되어 보이는 문제.
+  판별이 필요한 9–14px 본문에선 점이 1px 안팎이라 실효도 낮았음 (실측)
+- **dotted 0 옵트인 제공 (GSUB `zero` feature)**: Pretendard 상속 `zero` feature의 대체
+  글리프(정적 cid14525·cid14541 / VF uniE06B·uniE07B)를 「기준 0 윤곽 + 중앙 다이아몬드
+  dot」로 교체 — 이력서 등 0/O 구분이 필요한 화면만 CSS 한 줄로 활성:
+  `font-variant-numeric: slashed-zero` (폴백 `font-feature-settings: "zero" 1`).
+  대체 글리프가 Pretendard 슬래시 윤곽이라 Min Sans 숫자와 어긋나던 문제도 함께 해소.
+  어드밴스는 기준 0과 동일(tnum 폭 정렬 유지). web/ CSS 3종에 `.incruit-sans-dotted-zero`
+  유틸 클래스 추가
+- l-tail 등 나머지 판별성 요소는 무변경. 전 산출물(9웨이트 OTF·pre-hint/hinted TTF·VF·
+  woff/woff2) 재빌드, 폰트 내부 버전 0.5
+- hinted TTF는 ttfautohint 기본 옵션 + `--no-info`로 재생성 (기존 바이너리에 옵션 기록
+  부재 — TTFA 테이블·name 정보 없음 실측)
+
 ## v0.4.2 — 2026-07-05
 - **CDN(jsDelivr) 배포 지원**: `web/incruit-sans.css`·`incruit-sans-hinted.css`·`incruit-sans-vf.css` 추가
   — 태그 핀 URL(`@v0.4.2`)로 즉시 사용, 상대경로 url()이라 CSS와 woff2가 같은 태그로 불변 서빙

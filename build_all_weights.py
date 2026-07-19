@@ -127,7 +127,7 @@ def build_one(weight_name, weight_value):
     new_style = weight_name
     new_full = f"Incruit Sans {weight_name}"
     new_psname = f"IncruitSans-{weight_name}"
-    new_version = f"Version 0.4; weight={weight_value}; Built 2026-07-05"
+    new_version = f"Version 0.5; weight={weight_value}; Built 2026-07-19"
 
     name_table = base['name']
     base['OS/2'].usWeightClass = weight_value
@@ -138,7 +138,7 @@ def build_one(weight_name, weight_value):
         elif record.nameID == 2:
             record.string = new_style.encode(record.getEncoding())
         elif record.nameID == 3:
-            record.string = f"Incruit Sans;{weight_name};Version 0.4".encode(record.getEncoding())
+            record.string = f"Incruit Sans;{weight_name};Version 0.5".encode(record.getEncoding())
         elif record.nameID == 4:
             record.string = new_full.encode(record.getEncoding())
         elif record.nameID == 5:
@@ -167,13 +167,13 @@ def build_one(weight_name, weight_value):
     retune_font(base, verbose=False)
     # j descender left overhang fix (LSB → -42, prevents overlap with 25 chars)
     fix_j(base, verbose=False)
-    # 이력서 판별성: l tail(t foot 이식) + 0 중앙 dot (의장 결정 2026-07-05)
+    # 이력서 판별성: l tail(t foot 이식) + dotted 0 옵트인(zero feature, 의장 결정 2026-07-19 C안)
     distinguish(base, verbose=False)
     # 한글↔라틴 스크립트 경계 kern (+45/+75, A/B 렌더 판정 2026-07-05)
     add_script_kern(base, verbose=False)
 
-    # fontbakery B1: head.fontRevision을 name 버전 문자열(0.4)과 정합
-    base['head'].fontRevision = 0.4
+    # fontbakery B1: head.fontRevision을 name 버전 문자열(0.5)과 정합
+    base['head'].fontRevision = 0.5
     # fontbakery B3: 병합 원본 잔재 Mac platform name 레코드 제거
     name_table.removeNames(platformID=1)
 
@@ -185,7 +185,7 @@ def build_one(weight_name, weight_value):
     import chws_tool
     chws_tool.add_chws(output_path)
 
-    print(f"  ✓ {new_psname}.otf  (replaced {replaced} latin, retuned digits, fixed j, l-tail+0-dot, chws)")
+    print(f"  ✓ {new_psname}.otf  (replaced {replaced} latin, retuned digits, fixed j, l-tail+dotted-0-optin, chws)")
     return True
 
 
