@@ -1,5 +1,17 @@
 # Incruit Sans — Changelog
 
+## v0.5.1 — 2026-07-22
+- **tnum+zero 체인 버그 수정** — GSUB에서 `zero`(lookup 13)가 `tnum`(lookup 53)보다 먼저
+  적용돼, dotted 0 옵트인 상태에서 tnum을 켜면 0만 proportional 폭(Regular 1222 vs
+  tabular 1258)으로 남아 숫자 정렬이 36유닛 어긋나던 문제(Pretendard 상속, harfbuzz 실측).
+  tnum lookup에 dotted alt 짝 매핑(cid14525→cid14541)을 주입해 체인 완성 — 9웨이트 전수
+  `tnum+zero` 셰이핑 균일 확인. VF 동일 적용. 폰트 내부 버전 0.51 (VF head.fontRevision
+  0.5 잔존도 0.51로 정합)
+- **VF dotted tabular 0 어드밴스 정합** — 이식된 dotted tabular 0이 정적 마스터의
+  어드밴스 모델(Black 1394)을 따라와, Pretendard 모델(1396)을 쓰는 VF의 다른 tabular
+  숫자와 최대 2유닛 어긋나던 문제. gvar phantom(pp1) 델타와 hmtx를 짝 글리프(uniE071)에
+  정합해 전 웨이트 spread 0 (harfbuzz 실측). 윤곽 델타는 무변경
+
 ## v0.5.0 — 2026-07-19
 - **기본 `0` 민짜 복귀 (0-dot 제거)** — 의장 결정 C안: 대형 볼드 숫자(대시보드 통계 카드)에서
   중앙점이 counter의 43%(Bold)~66%(Black)를 차지해 도형-배경이 반전되어 보이는 문제.

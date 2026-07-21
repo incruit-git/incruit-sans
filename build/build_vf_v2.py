@@ -30,6 +30,8 @@ from fontTools.pens.recordingPen import RecordingPen
 from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.subset import Options, Subsetter
 from fontTools.ttLib import TTFont
+from fontTools.ttLib.tables.TupleVariation import TupleVariation
+from copy import deepcopy
 from fontTools.varLib import instancer
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -184,6 +186,28 @@ def main():
         b_gvar.variations[v_alt] = l_gvar.variations.get(s_alt, [])
         base['hmtx'][v_alt] = latin['hmtx'][s_alt]
         print(f'  dotted-0 이식: {s_alt} -> {v_alt} (base {s_base}/{v_base})')
+        # tabular 쌍(v_base가 인코딩 0이 아닌 쪽)은 어드밴스 변이를 v_base에 정합.
+        # VF의 tabular 숫자들은 Pretendard 어드밴스 모델(Black 1396)이고 정적
+        # 마스터는 retune 모델(1394)이라, 정적 것을 그대로 두면 tnum+zero 시
+        # dotted 0만 최대 2유닛 어긋난다. 윤곽 델타는 두고 phantom pp1만 교체.
+        if v_base != v_zero:
+            # 리전 구조가 다르다(정적 9마스터 vs Pretendard 2리전) → 튜플별 pp1
+            # 복사는 불가. 대신 기존 튜플의 어드밴스 델타를 전부 0으로 지우고,
+            # v_base의 리전·pp1만 담은 어드밴스 전용 튜플을 덧붙인다(gvar는
+            # 선형 합산이라 v_base의 어드밴스 함수를 정확히 재현).
+            alt_tuples = b_gvar.variations[v_alt]
+            n_points = len(alt_tuples[0].coordinates)
+            assert all(len(tv.coordinates) == n_points for tv in alt_tuples)
+            for tv in alt_tuples:
+                tv.coordinates[-3] = (0, 0)
+            for stv in b_gvar.variations[v_base]:
+                pp1 = stv.coordinates[-3] or (0, 0)
+                coords = [(0, 0)] * (n_points - 3) + [pp1, (0, 0), (0, 0)]
+                alt_tuples.append(TupleVariation(deepcopy(stv.axes), coords))
+            adv = base['hmtx'][v_base][0]
+            base['hmtx'][v_alt] = (adv, base['hmtx'][v_alt][1])
+            print(f'  어드밴스 정합: {v_alt} ← {v_base} '
+                  f'(default {adv}, +튜플 {len(b_gvar.variations[v_base])})')
     # tnum+zero 폭 체인 수리 (VF 자체 GSUB 대상 — 정적판은 distinguish()가 처리)
     fix_tnum_zero_chain(base)
 
@@ -191,9 +215,9 @@ def main():
     name = base['name']
     name.setName('Incruit Sans Variable', 1, 3, 1, 0x409)
     name.setName('Regular', 2, 3, 1, 0x409)
-    name.setName('Incruit Sans;Regular;Version 0.5', 3, 3, 1, 0x409)
+    name.setName('Incruit Sans;Regular;Version 0.51', 3, 3, 1, 0x409)
     name.setName('Incruit Sans Variable', 4, 3, 1, 0x409)
-    name.setName('Version 0.5; variable; Built 2026-07-19', 5, 3, 1, 0x409)
+    name.setName('Version 0.51; variable; Built 2026-07-22', 5, 3, 1, 0x409)
     name.setName('IncruitSans-Variable', 6, 3, 1, 0x409)
     name.setName('Incruit Sans', 16, 3, 1, 0x409)
     name.setName('Regular', 17, 3, 1, 0x409)
@@ -202,7 +226,7 @@ def main():
                  'Min Sans (Jinseong Kim), both licensed under SIL Open Font '
                  'License 1.1. Use, modify, and redistribute freely under the '
                  'same terms.', 13, 3, 1, 0x409)
-    base['head'].fontRevision = 0.5          # fontbakery B1
+    base['head'].fontRevision = 0.51         # fontbakery B1
 
     # fvar instance 이름을 우리 name 테이블 기준으로 재설정
     fvar = base['fvar']

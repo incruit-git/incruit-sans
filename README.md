@@ -2,7 +2,7 @@
 
 **이력서 전문 폰트 — Pretendard 한글 × Min Sans 라틴**
 
-- Version: **v0.5.0** (폰트 바이너리 = v0.5 — [CHANGELOG](CHANGELOG.md))
+- Version: **v0.5.1** (폰트 바이너리 = v0.51 — [CHANGELOG](CHANGELOG.md))
 - Last built: 2026-07-05
 - Glyphs: 한글 11,172자 (Pretendard) + 라틴 383자 (Min Sans, 2× 스케일) — 총 14,716 (VF 14,757)
 - UPM: 2048 통일
@@ -85,13 +85,13 @@ repo에 커밋된 `web/*.css`를 jsDelivr 태그 핀 URL로 바로 사용한다.
 
 ```html
 <!-- 정적 9웨이트 (일반 본문) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.5.0/web/incruit-sans.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.5.1/web/incruit-sans.css">
 
 <!-- 소형 UI·Windows 최적화 (ttfautohint) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.5.0/web/incruit-sans-hinted.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.5.1/web/incruit-sans-hinted.css">
 
 <!-- Variable Font 단일 파일 (family: 'Incruit Sans Variable') -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.5.0/web/incruit-sans-vf.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/incruit-git/incruit-sans@v0.5.1/web/incruit-sans-vf.css">
 ```
 
 ```css
