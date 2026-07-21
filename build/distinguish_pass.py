@@ -238,10 +238,47 @@ def add_zero_dot(font, verbose=True):
     return changed
 
 
+def fix_tnum_zero_chain(font, verbose=True):
+    """tnum+zero 동시 활성 시 0만 proportional 폭이 되는 체인 단절 수리.
+
+    lookup 순서상 zero(기본0→대체)가 tnum보다 먼저 적용되는데, tnum lookup에
+    대체 글리프의 매핑이 없어 0만 tabular 폭(1258)을 못 받고 1222로 남는
+    Pretendard 상속 결함 (2026-07-19 harfbuzz 실측: '100' tnum+zero 시
+    1은 1258, 0은 1222). zero 쌍 (base_p→alt_p)에 대해 tnum이
+    base_p→base_t로 보내면 alt_p→alt_t를 tnum lookup에 추가해 체인 완성:
+    0 →(zero)→ alt_p →(tnum)→ alt_t(= tabular dotted 0, 1258).
+    CFF 정적·TTF VF 공용(GSUB만 조작). 멱등: 기존 매핑 있으면 skip.
+    """
+    pairs = dict(zero_feature_pairs(font))   # base → alt
+    gsub = font['GSUB'].table
+    added = []
+    seen_lookups = set()
+    for fr in gsub.FeatureList.FeatureRecord:
+        if fr.FeatureTag != 'tnum':
+            continue
+        for li in fr.Feature.LookupListIndex:
+            if li in seen_lookups:
+                continue
+            seen_lookups.add(li)
+            lk = gsub.LookupList.Lookup[li]
+            if lk.LookupType != 1:
+                continue
+            for st in lk.SubTable:
+                for base_p, base_t in list(st.mapping.items()):
+                    alt_p, alt_t = pairs.get(base_p), pairs.get(base_t)
+                    if alt_p and alt_t and alt_p not in st.mapping:
+                        st.mapping[alt_p] = alt_t
+                        added.append(f'{alt_p}->{alt_t}')
+    if verbose and added:
+        print(f'  tnum-zero chain: {", ".join(added)}')
+    return bool(added)
+
+
 def distinguish(font, verbose=True):
     a = add_l_tail(font, verbose=verbose)
     b = add_zero_dot(font, verbose=verbose)
-    return a or b
+    c = fix_tnum_zero_chain(font, verbose=verbose)
+    return a or b or c
 
 
 if __name__ == '__main__':

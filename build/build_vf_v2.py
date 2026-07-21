@@ -34,7 +34,7 @@ from fontTools.varLib import instancer
 
 sys.path.insert(0, str(Path(__file__).parent))
 from compat_fix import compatibilize, draw_multi
-from distinguish_pass import zero_feature_pairs
+from distinguish_pass import fix_tnum_zero_chain, zero_feature_pairs
 from kern_hangul_latin import add_script_kern
 
 ROOT = Path(__file__).parent.parent
@@ -184,6 +184,8 @@ def main():
         b_gvar.variations[v_alt] = l_gvar.variations.get(s_alt, [])
         base['hmtx'][v_alt] = latin['hmtx'][s_alt]
         print(f'  dotted-0 이식: {s_alt} -> {v_alt} (base {s_base}/{v_base})')
+    # tnum+zero 폭 체인 수리 (VF 자체 GSUB 대상 — 정적판은 distinguish()가 처리)
+    fix_tnum_zero_chain(base)
 
     print('[4/4] 네이밍·STAT·instances·메트릭 정합')
     name = base['name']
